@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourest</title>
+    <link rel="shortcut icon" type="image/x-icon" href="./images/favicon.png">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.1.2/css/all.css">
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.18/css/bootstrap-select.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    <link rel="stylesheet" href="./lib/css/style.css">
+
+</head>
+
+<body class="">
+    <div class="wrapper">
+        <header class="header">
+            <div id="top-bar" class="header-top top-bar">
+                <div class="container">
+                    <div class="row justify-content-between">
+                        <div class="top-bar__item-left">
+                            <div class="top-bar__item top-bar__item-selector">
+                                <div class="dropdown">
+                                    <a href="#" data-toggle="dropdown" aria-expanded="true">
+                                        <i class="fa-solid fa-location-dot"></i> Hà Nội
+                                        <i class="fa-solid fa-caret-down"></i>
+                                    </a>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">Hà Nội</a>
+                                        <a class="dropdown-item" href="#">Hồ Chí Minh</a>
+                                        <a class="dropdown-item" href="#">Tỉnh Thành Khác</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="top-bar__item top-bar__item--newsletter-link">
+                                <a href="#" data-toggle="dropdown" aria-expanded="true"><i class="fa-regular fa-credit-card-front"></i> Đăng ký bản tin</a>
+                                <div class="dropdown-menu newsletter-popup">
+                                    <div class="modal-header">
+                                        <h4 class="modal-title text-center">ĐĂNG KÝ BẢN TIN</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form action="" id="" class="form-general">
+                                            <div class="form-group">
+                                                <div class="input-group">
+                                                    <div class="input-group-addon">
+                                                        <i class="fa-regular fa-envelope"></i>
+                                                    </div>
+                                                    <input type="text" class="form-control" placeholder="Nhập email">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <select name="StateId" id="stateId" class="form-control">
+                                                    <option value="">Chọn tỉnh thành</option>
+                                                    <option value="">Hà Nội</option>
+                                                    <option value="">Hồ Chí Minh</option>
+                                                    <option value="">Tỉnh thành khác</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group register-new-letter">
+                                                <div class="input-group">
+
+                                                    <label for="checkagree">
+                                                        <input type="checkbox" id="checkagree">
+                                                        Đồng ý với <a href="#">chính sách bảo mật thông tin</a>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <button type="submit" class="btn btn-success btn-block">ÐĂNG KÝ</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="top-bar__item-right">
+                            <div class="top-bar__item top-bar__item-nav navigation navigation-inline" style="border-right: 1px solid #dddddd;">
+                                <ul id="user__support" class="navbar-right">
+                                    <li>
+                                        <a href="tel:+19006760">
+                                            <i class="fa-solid fa-phone"></i> Hotline:
+                                            <span class="hotline-number">1900 6760</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="mailto:info@webhotel.vn">
+                                            <i class="fa-solid fa-envelope"></i> Email: info@webhotel.vn
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <i class="fa-solid fa-circle-question"></i> Hỗ trợ trực tuyến
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="top-bar__item top-bar__item-nav navigation navigation-inline">
+                                <ul id="user__info_header" class="navbar-right">
+                                    <li>
+                                        <i class="fa-regular fa-user"></i>
+                                        <a href="">Đăng ký</a>
+                                    </li>
+                                    <li>&nbsp; | &nbsp;</li>
+                                    <li>
+                                        <a href="#" data-toggle="dropdown" aria-expanded="true">Đăng nhập</a>
+                                        <div id="" class="dropdown-menu login-popup">
+                                            <div class="modal-header">
+                                                <h4 class="modal-title text-center">ÐĂNG NHẬP</h4>
+                                            </div>
+                                            <div class="modal-body clearfix">
+                                                <form action="" class="form-general">
+                                                    <div class="form-group">
+                                                        <div class="input-group">
+                                                            <div class="input-group-addon">
+                                                                <i class="fa-regular fa-user"></i>
+                                                            </div>
+                                                            <input type="text" class="form-control" placeholder="Tên đăng nhập">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <div class="input-group">
+                                                            <div class="input-group-addon">
+                                                                <i class="fa-regular fa-lock-hashtag"></i>
+                                                            </div>
+                                                            <input type="password" class="form-control" placeholder="Mật khẩu">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group password-helper">
+                                                        <label for="remember-me" class="remember-me">
+                                                            <input type="checkbox" name="remember-me" id="remember-me" checked="checked">
+                                                            Ghi nhớ đăng nhập
+                                                        </label>
+                                                        <a href="" class="pull-right">Quên mật khẩu</a>
+                                                    </div>
+                                                    <div class="form-group mb-0">
+                                                        <button type="submit" class="btn btn-success btn-block">ÐĂNG NHẬP</button>
+                                                        <p class="login-register-helper mb-1">Bạn chưa có tài khoản? <a rel="nofollow" href="/register.html">Ðăng ký ngay</a></p>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <div class="text-left">
+                                                    <p style="margin-bottom: 5px;">Hoặc đăng nhập bằng</p>
+                                                    <div class="box-social">
+                                                        <a href="javascript:void(0);" class="login-google login-social social-google" id="login-google"><img src="//www.hotdeal.vn/assets/img/icon-google.png" alt="Đăng nhập bằng Google+"></a>
+                                                        <a href="javascript:void(0);" class="login-facebook login-social social-facebook" id="login-facebook"><img src="//www.hotdeal.vn/assets/img/icon-facebook.png" alt="Đăng nhập bằng Facebook"></a>
+                                                        <!--                    <a href="javascript:void(0);" class="login-yahoo login-social social-yahoo" id="login-yahoo"><img src="-->
+                                                        <!--" alt="Đăng nhập bằng Yahoo!" /></a>-->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header-main">
+                <div class="container">
+                    <div class="row">
+                        <div class="logo-wrapper col-md-4">
+                            <a href="./index.html">
+                                <img src="./images/logo-hotdeal.png" alt="" class="hidden-xs hidden-sm logo" style="margin:0 auto;">
+                                <!-- <img src="./images/logo-hotdeal.png" alt="" class="visible-xs visible-sm logo" style="margin:0 auto;"> -->
+                            </a>
+                        </div>
+                        <div class="search-area col-md-6" style="padding-left:10px;">
+                            <form action="">
+                                <div class="search-box form-inline">
+                                    <div class="search-box__category">
+                                        <select class="selectpicker" id="category_search" name="category">         
+                                                <option value="0">Tất cả danh mục</option>
+                                                <option value="557">- Ẩm thực</option>
+                                                <option value="767">- Hotel &amp; Resort</option>
+                                                <option value="579">- Spa & Làm đẹp</option>
+                                                <option value="1934">- Giải trí &amp; Thể thao</option>
+                                                <option value="1980">- Massage body/ massage foot</option>
+                                                <option value="1960">- Đào tạo</option>
+                                                <option value="1990">- Bệnh viện - Phòng khám</option>
+                                                <option value="139">- Buffet</option>
+                                                <option value="1994">- Nha khoa</option>
+                                                <option value="581">- Du Lịch</option>
+                                            </select>
+                                    </div>
+                                    <div class="search-box__input" style="overflow: visible;">
+                                        <input type="text" id="search_all_minimize" class="form-control input-search" name="q" placeholder="Tìm kiếm sản phẩm / khuyến mãi" value="" />
+
+                                        <button class="btn btn-danger">
+                                                <i class="fa-solid fa-magnifying-glass"></i>
+                                                <span class="sr-only">Tìm kiếm</span>
+                                            </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="header-cart-wrapper col-md-2">
+                            <div class="header-cart">
+                                <div class="nav-cart">
+                                    <a href="#" data-toggle="dropdown">
+                                        <i class="fa-light fa-cart-shopping-fast"></i>
+                                        <span class="circle">0</span>
+                                        <span class="hidden-xs hidden-sm">Giỏ hàng</span></a>
+                                    <div class="dropdown-menu dropdown-cart" role="menu">
+                                        <div class="minicart__wrapper"></div>
+
+                                        <div class="minicart__summary">
+                                            Tổng cộng: <strong>
+                                        <span class="price price--highlight">
+                                            <span class="price__value">0</span>
+                                            <span class="price__symbol">đ</span>
+                                        </span></strong>
+                                        </div>
+                                        <div class="minicart__actions">
+                                            <a class="btn btn--view-cart" href="#" rel="nofollow" disabled="disabled">Xem giỏ hàng</a>
+                                            <a class="btn btn-success btn--buy-now btn--buy-now-new" href="#" rel="nofollow" disabled="disabled">Đặt hàng</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <nav class="header-navigation main-nav" id="main-nav">
+                <div class="container">
+                    <ul class="nav main-nav">
+                        <li class="main-nav__branding active">
+                            <a class="branding__heading" href="#">
+                                <span class="">Danh mục <i class="fa fa-angle-down"></i></span>
+                            </a>
+                            <ul class="branding__menu">
+                                <li class="branding__item item-promotion-hot hidden-sm hidden-xs">
+                                    <a href="./promotions.html">
+                                        <i class="fa-regular fa-fire"></i>Khuyến mãi HOT
+                                    </a>
+                                </li>
+                                <li class="branding__item branding multicolumns">
+                                    <a href="./category_main.html">
+                                        <i class="fa-regular fa-utensils"></i> Ẩm Thực
+                                    </a>
+                                    <div class="submenu-wrapper">
+                                        <div class="branding__submenu columns columns-2">
+                                            <div class="menucolumn menucolumn-lv_0">
+                                                <ul class="submenu">
+                                                    <li class="view-all">
+                                                        <div class="">HOT</div>
+                                                        <a href="">Bán chạy</a>
+                                                    </li>
+                                                    <li class="view-all">
+                                                        <div class="">NEW</div>
+                                                        <a href="">Hàng mới</a>
+                                                    </li>
+                                                    <li class="view-all">
+                                                        <div class="">SALE</div>
+                                                        <a href=""> Giảm giá</a>
+                                                    </li>
+                                                    <li class="submenu-heading">
+                                                        <a href="">Dịch Vụ Ẩm Thực</a>
+                                                    </li>
+                                                    <li class="child">
+                                                        <a href="">Buffet</a>
+                                                    </li>
+                                                    <li class="child">
+                                                        <a href="">Nhà hàng</a>
+                                                    </li>
+                                                    <li class="child">
+                                                        <a href="">Quán ăn</a>
+                                                    </li>
+                                                    <li class="child">
+                                                        <a href="">Đặc biệt</a>
+                                                    </li>
+                                                    <li class="view-more">
+                                                        <a data-path="" href="">Xem thêm</a>
+                                                    </li>
+                                                    <li class="submenu-heading">
+                                                        <a href="">Thiên Đường Ăn Vặt</a>
+                                                    </li>
+                                                    <li class="child">
+                                                        <a href="">Bánh ngọt</a>
+                                                    </li>
+                                                    <li class="child">
+                                                        <a href="">Top quán ăn nổi tiếng</a>
+                                                    </li>
+                                                    <li class="view-more">
+                                                        <a data-path="" href="">Xem thêm</a>
+                                                    </li>
+                                                    <li class="submenu-heading">
+                                                        <a href="">Món Ngon Ngày tết</a>
+                                                    </li>
+
+                                                    <li class="view-more">
+                                                        <a data-path="" href="">Xem thêm</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="menucolumn menucolumn-lv_1">
+                                                <ul class="submenu">
+                                                    <li class="submenu-heading">
+                                                        <a href="">Ẩm Thực Bán Chạy</a>
+                                                    </li>
+                                                    <li class="child">
+                                                        <a href="">Top ẩm thực ngon số 1</a>
+                                                    </li>
+                                                    <li class="child">
+                                                        <a href="">Top lẩu nướng ngon nức tiếng</a>
+                                                    </li>
+                                                    <li class="child">
+                                                        <a href="">Top món cua</a>
+                                                    </li>
+                                                    <li class="child">
+                                                        <a href="">Top món ngon Việt-Nhật-Thái-Hàn</a>
+                                                    </li>
+                                                    <li class="child">
+                                                        <a href="">Khai trương sườn NO.1</a>
+                                                    </li>
+                                                    <li class="child">
+                                                        <a href="">BBQ thịt nướng</a>
+                                                    </li>
+                                                    <li class="child">
+                                                        <a href="">Sushi</a>
+                                                    </li>
+                                                    <li class="view-more">
+                                                        <a data-path="" href="">Xem thêm</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="branding__submenu columns columns-banner">
+                                            <a href="">
+
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="branding__item branding multicolumns">
+                                    <a href="">
+                                        <i class="fa-regular fa-spa"></i>Spa & Làm đẹp
+                                    </a>
+                                    <div class="submenu-wrapper">
+                                        <div class="branding__submenu columns columns-2">
+                                            <div class="menucolumn menucolumn-lv_0">
+                                                <ul class="submenu">
+                                                    <li class="view-all">
+                                                        <div class="">HOT</div>
+                                                        <a href="">Bán chạy</a></li>
+                                                    <li class="view-all">
+                                                        <div class="">NEW</div>
+                                                        <a href="">Hàng mới</a>
+                                                    </li>
+                                                    <li class="view-all">
+                                                        <div class="">SALE</div>
+                                                        <a href="">Giảm giá</a>
+                                                    </li>
+                                                    <li class="submenu-heading">
+                                                        <a href="">Dịch Vụ Làm Đẹp</a>
+                                                    </li>
+                                                    <li class="child">
+                                                        <a href="">Hair Salon &amp; làm đẹp</a>
+                                                    </li>
+                                                    <li class="child">
+                                                        <a href="">Chăm sóc cơ thể</a>
+                                                    </li>
+                                                    <li class="child">
+                                                        <a href="">Thẩm mỹ trị liệu công nghệ cao</a>
+                                                    </li>
+                                                    <li class="child">
+                                                        <a href="">Phòng tập</a>
+                                                    </li>
+                                                    <li class="child">
+                                                        <a href="">Làm Đẹp Không Lo Về Giá</a>
+                                                    </li>
+                                                    <li class="child">
+                                                        <a href="">Tắm Trắng</a>
+                                                    </li>
+                                                    <li class="view-more">
+                                                        <a data-path="" href=" ">Xem thêm</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="menucolumn menucolumn-lv_1">
+                                                <ul class="submenu">
+                                                    <li class="submenu-heading">
+                                                        <a href="">Spa &amp; Làm Đẹp Bán Chạy</a>
+                                                    </li>
+                                                    <li class="child"><a href="">Chăm sóc da mặt</a></li>
+                                                    <li class="child"><a href="">Trị liệu thâm nám</a></li>
+                                                    <li class="child"><a href="">Liệu trình tắm trắng</a></li>
+                                                    <li class="child"><a href="">Liệu trình giảm cân</a></li>
+                                                    <li class="child"><a href="">Trọn gói triệt lông</a></li>
+                                                    <li class="child"><a href="">Trẻ hóa - nâng cơ da</a></li>
+                                                    <li class="child"><a href="">Phun thiêu thẩm mỹ</a></li>
+                                                    <li class="child"><a href="">Chăm sóc nha khoa</a></li>
+                                                    <li class="child"><a href="">Massage </a></li>
+                                                    <li class="child"><a href="">Hair salon chăm sóc tóc</a></li>
+                                                    <li class="view-more"><a data-path="" href="">Xem thêm</a></li>
+                                                    <li class="submenu-heading"><a href="">Top Deal Spa &amp; Làm Đẹp</a></li>
+                                                    <li class="view-more"><a data-path="">Xem thêm</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="branding__submenu columns columns-banner">
+                                            <a href="">
+                                                <img src="./images/spa-columns.jpg" alt="">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="branding__item branding multicolumns">
+                                    <a href="">
+                                        <i class="fa-regular fa-film"></i> Giải trí & Thể thao
+                                    </a>
+                                </li>
+                                <li class="branding__item branding multicolumns">
+                                    <a href="">
+                                        <i class="fa-regular fa-briefcase"></i> Tour du lịch
+                                    </a>
+                                </li>
+                                <li class="branding__item branding multicolumns">
+                                    <a href="">
+                                        <i class="fa-regular fa-fork-knife"></i> Buffet
+                                    </a>
+                                </li>
+                                <li class="branding__item branding multicolumns">
+                                    <a href="">
+                                        <i class="fa-regular fa-sparkles"></i> Massgage nam nữ
+                                    </a>
+                                </li>
+                                <li class="branding__item branding multicolumns">
+                                    <a href="">
+                                        <i class="fa-regular fa-tooth"></i> Nha khoa
+                                    </a>
+                                </li>
+                                <li class="branding__item branding multicolumns">
+                                    <a href="">
+                                        <i class="fa-regular fa-heart-pulse"></i> Bệnh viện & Phòng khám
+                                    </a>
+                                </li>
+                                <li class="branding__item branding multicolumns">
+                                    <a href="">
+                                        <i class="fa-regular fa-hotel"></i> Hotel & Resort
+                                    </a>
+                                </li>
+                                <li class="branding__item branding multicolumns">
+                                    <a href="">
+                                        <i class="fa-regular fa-user-tie-hair"></i> Đào tạo & Hội thảo
+                                    </a>
+                                </li>
+                                <li class="branding__item branding multicolumns">
+                                    <a href="">
+                                        <i class="fa-regular fa-ticket"></i> Vé sự kiện
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="header-affix">
+                            <a href="">Deal Mới</a>
+                        </li>
+                        <li class="header-affix">
+                            <a href="">Deal bán chạy</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <nav class="header-navigation main-nav sticky-header" id="main-nav-clone" style="z-index:20;">
+                <div class="container">
+                    <ul class="nav main-nav">
+                        <li class="main-nav__branding active">
+                            <a class="branding__heading" href="#">
+                                <span class="">Danh mục <i class="fa fa-angle-down"></i></span>
+                            </a>
+                            <ul class="branding__menu">
+                                <li class="branding__item item-promotion-hot hidden-sm hidden-xs">
+                                    <a href="">
+                                        <i class="fa-regular fa-fire"></i>Khuyến mãi HOT
+                                    </a>
+                                </li>
+                                <li class="branding__item branding multicolumns">
+                                    <a href="">
+                                        <i class="fa-regular fa-utensils"></i> Ẩm Thực
+                                    </a>
+                                    <div class="submenu-wrapper">
+                                        <div class="branding__submenu columns columns-2">
+                                            <div class="menucolumn menucolumn-lv_0">
+                                                <ul class="submenu">
+                                                    <li class="view-all">
+                                                        <div class="">HOT</div>
+                                                        <a href="">Bán chạy</a>
+                                                    </li>
+                                                    <li class="view-all">
+                                                        <div class="">NEW</div>
+                                                        <a href="">Hàng mới</a>
+                                                    </li>
+                                                    <li class="view-all">
+                                                        <div class="">SALE</div>
+                                                        <a href=""> Giảm giá</a>
+                                                    </li>
+                                                    <li class="submenu-heading">
+                                                        <a href="">Dịch Vụ Ẩm Thực</a>
+                                                    </li>
+                                                    <li class="child">
+                                                        <a href="">Buffet</a>
+                                                    </li>
+                                                    <li class="child">
+                                                        <a href="">Nhà hàng</a>
+                                                    </li>
+                                                    <li class="child">
+                                                        <a href="">Quán ăn</a>
+                                                    </li>
+                                                    <li class="child">
+                                                        <a href="">Đặc biệt</a>
+                                                    </li>
+                                                    <li class="view-more">
+                                                        <a data-path="" href="">Xem thêm</a>
+                                                    </li>
+                                                    <li class="submenu-heading">
+                                                        <a href="">Thiên Đường Ăn Vặt</a>
+                                                    </li>
+                                                    <li class="child">
+                                                        <a href="">Bánh ngọt</a>
+                                                    </li>
+                                                    <li class="child">
+                                                        <a href="">Top quán ăn nổi tiếng</a>
+                                                    </li>
+                                                    <li class="view-more">
+                                                        <a data-path="" href="">Xem thêm</a>
+                                                    </li>
+                                                    <li class="submenu-heading">
+                                                        <a href="">Món Ngon Ngày tết</a>
+                                                    </li>
+
+                                                    <li class="view-more">
+                                                        <a data-path="" href="">Xem thêm</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="menucolumn menucolumn-lv_1">
+                                                <ul class="submenu">
+                                                    <li class="submenu-heading">
+                                                        <a href="">Ẩm Thực Bán Chạy</a>
+                                                    </li>
+                                                    <li class="child">
+                                                        <a href="">Top ẩm thực ngon số 1</a>
+                                                    </li>
+                                                    <li class="child">
+                                                        <a href="">Top lẩu nướng ngon nức tiếng</a>
+                                                    </li>
+                                                    <li class="child">
+                                                        <a href="">Top món cua</a>
+                                                    </li>
+                                                    <li class="child">
+                                                        <a href="">Top món ngon Việt-Nhật-Thái-Hàn</a>
+                                                    </li>
+                                                    <li class="child">
+                                                        <a href="">Khai trương sườn NO.1</a>
+                                                    </li>
+                                                    <li class="child">
+                                                        <a href="">BBQ thịt nướng</a>
+                                                    </li>
+                                                    <li class="child">
+                                                        <a href="">Sushi</a>
+                                                    </li>
+                                                    <li class="view-more">
+                                                        <a data-path="" href="">Xem thêm</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="branding__submenu columns columns-banner">
+                                            <a href="">
+
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="branding__item branding multicolumns">
+                                    <a href="">
+                                        <i class="fa-regular fa-spa"></i>Spa & Làm đẹp
+                                    </a>
+                                    <div class="submenu-wrapper">
+                                        <div class="branding__submenu columns columns-2">
+                                            <div class="menucolumn menucolumn-lv_0">
+                                                <ul class="submenu">
+                                                    <li class="view-all">
+                                                        <div class="">HOT</div>
+                                                        <a href="">Bán chạy</a></li>
+                                                    <li class="view-all">
+                                                        <div class="">NEW</div>
+                                                        <a href="">Hàng mới</a>
+                                                    </li>
+                                                    <li class="view-all">
+                                                        <div class="">SALE</div>
+                                                        <a href="">Giảm giá</a>
+                                                    </li>
+                                                    <li class="submenu-heading">
+                                                        <a href="">Dịch Vụ Làm Đẹp</a>
+                                                    </li>
+                                                    <li class="child">
+                                                        <a href="">Hair Salon &amp; làm đẹp</a>
+                                                    </li>
+                                                    <li class="child">
+                                                        <a href="">Chăm sóc cơ thể</a>
+                                                    </li>
+                                                    <li class="child">
+                                                        <a href="">Thẩm mỹ trị liệu công nghệ cao</a>
+                                                    </li>
+                                                    <li class="child">
+                                                        <a href="">Phòng tập</a>
+                                                    </li>
+                                                    <li class="child">
+                                                        <a href="">Làm Đẹp Không Lo Về Giá</a>
+                                                    </li>
+                                                    <li class="child">
+                                                        <a href="">Tắm Trắng</a>
+                                                    </li>
+                                                    <li class="view-more">
+                                                        <a data-path="" href=" ">Xem thêm</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="menucolumn menucolumn-lv_1">
+                                                <ul class="submenu">
+                                                    <li class="submenu-heading">
+                                                        <a href="">Spa &amp; Làm Đẹp Bán Chạy</a>
+                                                    </li>
+                                                    <li class="child"><a href="">Chăm sóc da mặt</a></li>
+                                                    <li class="child"><a href="">Trị liệu thâm nám</a></li>
+                                                    <li class="child"><a href="">Liệu trình tắm trắng</a></li>
+                                                    <li class="child"><a href="">Liệu trình giảm cân</a></li>
+                                                    <li class="child"><a href="">Trọn gói triệt lông</a></li>
+                                                    <li class="child"><a href="">Trẻ hóa - nâng cơ da</a></li>
+                                                    <li class="child"><a href="">Phun thiêu thẩm mỹ</a></li>
+                                                    <li class="child"><a href="">Chăm sóc nha khoa</a></li>
+                                                    <li class="child"><a href="">Massage </a></li>
+                                                    <li class="child"><a href="">Hair salon chăm sóc tóc</a></li>
+                                                    <li class="view-more"><a data-path="" href="">Xem thêm</a></li>
+                                                    <li class="submenu-heading"><a href="">Top Deal Spa &amp; Làm Đẹp</a></li>
+                                                    <li class="view-more"><a data-path="">Xem thêm</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="branding__submenu columns columns-banner">
+                                            <a href="">
+                                                <img src="./images/spa-columns.jpg" alt="">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="branding__item branding multicolumns">
+                                    <a href="">
+                                        <i class="fa-regular fa-film"></i> Giải trí & Thể thao
+                                    </a>
+                                </li>
+                                <li class="branding__item branding multicolumns">
+                                    <a href="">
+                                        <i class="fa-regular fa-briefcase"></i> Tour du lịch
+                                    </a>
+                                </li>
+                                <li class="branding__item branding multicolumns">
+                                    <a href="">
+                                        <i class="fa-regular fa-fork-knife"></i> Buffet
+                                    </a>
+                                </li>
+                                <li class="branding__item branding multicolumns">
+                                    <a href="">
+                                        <i class="fa-regular fa-sparkles"></i> Massgage nam nữ
+                                    </a>
+                                </li>
+                                <li class="branding__item branding multicolumns">
+                                    <a href="">
+                                        <i class="fa-regular fa-tooth"></i> Nha khoa
+                                    </a>
+                                </li>
+                                <li class="branding__item branding multicolumns">
+                                    <a href="">
+                                        <i class="fa-regular fa-heart-pulse"></i> Bệnh viện & Phòng khám
+                                    </a>
+                                </li>
+                                <li class="branding__item branding multicolumns">
+                                    <a href="">
+                                        <i class="fa-regular fa-hotel"></i> Hotel & Resort
+                                    </a>
+                                </li>
+                                <li class="branding__item branding multicolumns">
+                                    <a href="">
+                                        <i class="fa-regular fa-user-tie-hair"></i> Đào tạo & Hội thảo
+                                    </a>
+                                </li>
+                                <li class="branding__item branding multicolumns">
+                                    <a href="">
+                                        <i class="fa-regular fa-ticket"></i> Vé sự kiện
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="visible-affix">
+                            <a href="./index.html" class="logo-affix">
+                                <img src="./images/logo-hotdeal.svg" alt="">
+
+                            </a>
+                        </li>
+                        <li class="visible-affix">
+                            <div class="search-area">
+                                <form action="">
+                                    <div class="search-box form-inline">
+                                        <div class="search-box__category">
+                                            <select class="selectpicker" id="category_search" name="category">         
+                                                    <option value="0">Tất cả danh mục</option>
+                                                    <option value="557">- Ẩm thực</option>
+                                                    <option value="767">- Hotel &amp; Resort</option>
+                                                    <option value="579">- Spa & Làm đẹp</option>
+                                                    <option value="1934">- Giải trí &amp; Thể thao</option>
+                                                    <option value="1980">- Massage body/ massage foot</option>
+                                                    <option value="1960">- Đào tạo</option>
+                                                    <option value="1990">- Bệnh viện - Phòng khám</option>
+                                                    <option value="139">- Buffet</option>
+                                                    <option value="1994">- Nha khoa</option>
+                                                    <option value="581">- Du Lịch</option>
+                                                </select>
+                                        </div>
+                                        <div class="search-box__input" style="overflow: visible;">
+                                            <input type="text" id="search_all_minimize" class="form-control input-search" name="q" placeholder="Tìm kiếm sản phẩm / khuyến mãi" value="" />
+
+                                            <button class="btn btn-search">
+                                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                                    <span class="sr-only">Tìm kiếm</span>
+                                                </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="nav secondary-nav ">
+                        <li class="nav-cart">
+                            <a href="#" data-toggle="dropdown" aria-expanded="false"><i class="fa-light fa-cart-shopping-fast"></i><span class="circle">0</span> <span class="hd-cart-text">Giỏ hàng</span></a>
+                            <div class="dropdown-menu dropdown-cart" role="menu">
+                                <div class="minicart__wrapper"></div>
+
+                                <div class="minicart__summary">
+                                    Tổng cộng: <strong>
+                                        <span class="price price--highlight">
+                                            <span class="price__value">0</span>
+                                            <span class="price__symbol">đ</span>
+                                        </span></strong>
+                                </div>
+                                <div class="minicart__actions">
+                                    <a class="btn btn--view-cart" href="#" rel="nofollow" disabled="disabled">Xem giỏ hàng</a>
+                                    <a class="btn btn-success btn--buy-now btn--buy-now-new" href="#" rel="nofollow" disabled="disabled">Đặt hàng</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <main class="main">
+
+            <section class="breadcrumb">
+                <div class="container">
+                    <ol>
+                        <li>
+                            <a href="./index.html" class="breadcrumb-link">
+                                <span>Trang chủ</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="breadcrumb-link">
+                                <span>Ẩm thực</span>
+                            </a>
+                        </li>
+                    </ol>
+                </div>
+            </section>
+            <div class="container">
+                <div class="product product--details clearfix">
+                    <div class="product__gallery gallery">
+                        <div class="slide-for">
+                            <div class="item">
+                                <a href="">
+                                    <img src="./images/gl-cate.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="">
+                                    <img src="./images/gl-cate1.jpg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="slide-nav">
+                            <div class="item">
+                                <a href="">
+                                    <img src="./images/gl-cate.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="">
+                                    <img src="./images/gl-cate1.jpg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+
+        <footer class="footer">
+            <div class="footer-top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 footer-menu">
+                            <div class="col-md-4 col-b-left footer-menu__column menu">
+                                <ul>
+                                    <li>
+                                        <p class="menu__heading">Trợ giúp</p>
+                                        <div class="menu__listing">
+                                            <a href="">Cách thức thanh toán</a>
+                                            <a href="">Hotdeal Membership</a>
+                                            <a href="">Chính sách đổi trả hàng</a>
+                                            <a href="">Quy trình xử lý khi phát hiện hành vi kinh doanh vi phạm </a>
+                                            <a href="">Chính sách giao hàng</a>
+                                            <a href="">Hotdeal E-voucher</a>
+                                            <a href="">Biện pháp xử lý khi phát hiện hành vi kinh doanh vi phạm </a>
+                                            <a href="">Cơ chế kiểm soát các nhà cung cấp</a>
+                                            <a href="">Điều khoản trả góp</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-md-4 col-b-left footer-menu__column menu">
+                                <ul>
+                                    <li>
+                                        <p class="menu__heading">TUYỂN DỤNG</p>
+                                        <div class="menu__listing">
+                                            <a href="">Account Manager (Ngành Ẩm Thực)</a><a href="">Account Manager (Spa &amp; Beauty)</a>
+                                        </div>
+                                        <p class="menu__heading">Giới thiệu</p>
+                                        <div class="menu__listing">
+                                            <a href="">Quy chế hoạt động</a>
+                                            <a href="">Liên Hệ</a>
+                                            <a href="">Chính sách bảo mật thông tin</a>
+                                            <a href="">Về Chúng Tôi</a>
+                                            <a href="">Cơ chế giải quyết tranh chấp</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-md-4 col-b-left footer-menu__column menu">
+                                <ul>
+                                    <li>
+                                        <p class="menu__heading">Hợp tác</p>
+                                        <div class="menu__listing">
+                                            <a href="">Thẻ Quà Tặng</a>
+                                            <a href="">Liên hệ hợp tác</a></div>
+                                        <p class="menu__heading">VIDEO CLIPS</p>
+                                        <div class="menu__listing">
+                                            <a href="">Videoclips</a>
+                                        </div>
+                                        <p class="menu__heading">Thông Tin Báo Chí</p>
+                                        <div class="menu__listing">
+                                            <a href="">Điểm tin</a><a href="">Thông cáo báo chí</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-4 location hidden-xs">
+                            <p>công ty cổ phần hotdeal</p>
+                            <p>Văn phòng hcm</p> 5 2/2 Thoại Ngọc Hầu, Phường Hòa Thạnh, Quận Tân Phú, TP.HCM
+                            <br> <span>Điện thoại</span>: (028) 7300 5757
+                            <p>Chi nhánh hà nội</p> Khu Văn phòng, Tầng 3, Tòa CT2 chung cư Ban Cơ Yếu Chính Phủ, Đường Khuất Duy Tiến, Phường Nhân Chính, Quận Thanh Xuân, TP.Hà Nội
+                            <br> <span>Điện thoại</span>: (024) 7300 5757
+                            <p>Chăm sóc khách hàng</p> 52/2 Thoại Ngọc Hầu, Phường Hòa Thạnh, Quận Tân Phú, TP.HCM
+                            <br> <span>Điện thoại</span>: 1900 6760
+                            <br> <span>Email</span>: cs@hotdeal.vn
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-communication">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-7">
+                            <div class="row">
+                                <div class="col-md-6 news-letter hidden-sm hidden-xs">
+                                    <form action="">
+                                        <label>Đăng ký nhận bản tin khuyến mãi</label>
+                                        <div class="newsletter form-inline">
+                                            <div class="form-group has-feedback">
+                                                <div class="input-group">
+                                                    <input type="text" class="form-control newsletter-input" placeholder="Nhập email của bạn">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="input-group">
+                                                    <button type="submit" class="btn btn-success newsletter__button">Đăng ký
+                                                </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-md-6 app-store">
+                                    <label>hotdeal app</label>
+                                    <div class="content-app">
+                                        <span><a target="_blank" href="https://itunes.apple.com/vn/app/hotdeal.vn-cung-mua-chung/id1072313541?mt=8" rel="nofollow"><img src="https://s3-hd.hotdeal.vn/original/2017/11/2/5a13d8cc6385a-icon-appstore.png"></a></span>
+                                        <span><a target="_blank" href="https://play.google.com/store/apps/details?id=com.hotdealvn.hotdealapp" rel="nofollow"><img src="https://s3-hd.hotdeal.vn/original/2017/11/2/5a13d8cc639d2-icon-googleplay.png"></a></span>
+                                    </div>
+                                    <div class="hot-line">
+                                        hotline: <span>1900 6760</span><br>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="social">
+                                <label>follow us</label>
+                                <div class="social-items">
+                                    <a target="_blank" class="social-item social-item-facebook" href="" rel="nofollow">
+                                        <i class="fa-brands fa-facebook-f"></i>
+                                    </a>
+                                    <a target="_blank" class="social-item social-item-twitter" href="" rel="nofollow">
+                                        <i class="fa-brands fa-twitter"></i>
+                                    </a>
+                                    <a target="_blank" class="social-item social-item-google-plus" href="" rel="nofollow">
+                                        <i class="fa-brands fa-google-plus-g"></i>
+                                    </a>
+                                    <a target="_blank" class="social-item social-item-linkedin" href="" rel="nofollow">
+                                        <i class="fa-brands fa-linkedin-in"></i>
+                                    </a>
+                                    <a target="_blank" class="social-item social-item-youtube" href="" rel="nofollow">
+                                        <i class="fa-brands fa-youtube"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="">
+                                <div class="hot-line">
+                                    hotline tư vấn du lịch: <span>028 73003799 - 0354 466 968</span><br> Email booking: <span> booking@hotdeal.vn</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-middle hidden-xs">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <div class="redit-card">
+                                <p>phương thức thanh toán</p>
+                                <img src="https://s3-hd.hotdeal.vn/original/2017/11/1/5a0a64b85c310-card-visa.png">
+                                <img src="https://s3-hd.hotdeal.vn/original/2017/11/1/5a0a64b85c007-card-master.png">
+                                <img src="https://s3-hd.hotdeal.vn/original/2017/11/1/5a0a64b85c20d-card-onepay.png">
+                                <img src="https://s3-hd.hotdeal.vn/original/2017/11/1/5a0a64b85bde6-card-atm.png">
+                                <img src="https://s3-hd.hotdeal.vn/original/2017/11/1/5a0a64b85c115-card-money.png">
+                                <!--<img src="https://s3-hd.hotdeal.vn/original/2019/11/2/5de0ea786e178-card-laisaut.png">-->
+                                <img src="https://s3-hd.hotdeal.vn/original/2019/11/2/5de0ea786e288-card-jcb.png">
+                                <img src="https://s3-hd.hotdeal.vn/original/2019/11/2/5de0ea786e382-card-payoo.png">
+                                <img src="https://s3-hd.hotdeal.vn/original/2019/11/2/5de0ea786e47e-card-vnpay.png">
+                                <img src="https://s3-hd.hotdeal.vn/original/2019/11/2/5de0ea786e579-card-momo.png">
+                                <img src="https://s3-hd.hotdeal.vn/original/2021/3/1/60488543247a4-icon-smartpay.png">
+                                <img src="https://s3-hd.hotdeal.vn/original/2021/12/1/61b857cb21207-shopee-pay.png">
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="logo-shiper">
+                                <p>dịch vụ giao hàng</p>
+                                <img src="https://s3-hd.hotdeal.vn/original/2021/12/1/61b857cb21099-vnpost.jpg">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="logo-shiper">
+                                <p>website cùng hệ thống</p>
+                                <a href="https://www.vinabook.com/?utm_campaign=logotaihotdeal&amp;utm_medium=logo&amp;utm_source=hotdeal&amp;utm_content=logo" target="_blank"><img src="https://s3-hd.hotdeal.vn/original/2017/11/1/5a0a697ea03cc-logo-vinabook.png"></a>
+                                <a href="https://www.yesgo.vn/?utm_campaign=logotaihotdeal&amp;utm_medium=logo&amp;utm_source=hotdeal&amp;utm_content=logo" target="_blank"><img src="https://s3-hd.hotdeal.vn/original/2017/11/1/5a0a697ea0548-logo-yesgo.png"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom ">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-10">
+                            Công ty CP Hotdeal - 52/2 Thoại Ngọc Hầu, Phường Hòa Thạnh, Quận Tân Phú, TP.HCM <br> Mã số thuế: 0310955176 do Sở Kế hoạch đầu tư TP HCM cấp ngày 29/06/2011<br> ĐT: (028) 7300 5757 - Email: kinhdoanh@hotdeal.vn<br>
+                        </div>
+                        <div class="col-md-2 icon-dangky-cong-thuong">
+                            <a href="">
+                                <img src="https://s3-hd.hotdeal.vn/original/2017/11/1/5a0a6efbd6a4d-logo-dangky.png">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <a href="#" class="scrollup">
+        <i class="fa-sharp fa-solid fa-angle-up"></i>
+    </a>
+
+    <script src="./lib/js/jquery-3.6.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
+    <script src="./lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.18/js/bootstrap-select.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.4.0/jquery-migrate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js "></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script src="./lib/js/style.js "></script>
+    <script>
+        new WOW().init();
+    </script>
+
+</body>
+
+</html>
