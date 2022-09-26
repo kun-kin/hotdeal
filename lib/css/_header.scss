@@ -513,6 +513,11 @@ body.home .affix .main-nav .main-nav__branding.hover .branding__menu,
     display: block;
 }
 
+.main-nav li.hover>.branding__menu,
+body.home .main-nav .branding__menu {
+    display: block;
+}
+
 .logo-affix {
     display: block;
     width: 140px;
@@ -558,4 +563,8 @@ nav.main-nav .secondary-nav {
         -moz-border-radius: 50%;
         border-radius: 50%;
     }
+}
+
+.hotline-number {
+    color: #ed1c24;
 }
