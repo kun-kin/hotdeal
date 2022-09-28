@@ -62,9 +62,10 @@ body {
 }
 
 .container {
-    @media(min-width: 1200px) {
-        max-width: 1300px;
-    }
+    // @media(min-width: 1200px) {
+    //     max-width: 1300px;
+    // }
+    max-width: 1300px;
 }
 
 h4,
@@ -122,6 +123,30 @@ p {
         color: #444444;
         font-size: 13px;
     }
+}
+
+.xl-vx-100 {
+    @media(max-width: 1199.98px) {
+        width: 100%;
+    }
+}
+
+.dropdown-menu>li>a {
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: normal;
+    line-height: 1.428571429;
+    color: #333333;
+    white-space: nowrap;
+}
+
+.img-circle {
+    display: inline-block;
+    border: 1px solid #ffffff;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 100%;
 }
 
 .btn {
@@ -321,6 +346,12 @@ p {
 
 .hidden-xs {
     @media(max-width: 767.98px) {
+        display: none !important;
+    }
+}
+
+.hidden-xl {
+    @media(max-width: 991.98px) {
         display: none !important;
     }
 }
@@ -642,6 +673,38 @@ p {
         text-decoration: none;
         vertical-align: -6px;
     }
+    @media(max-width:991.98px) {
+        padding: 8px 0;
+        margin: 0;
+        border-bottom: 1px solid #bababa;
+        font-size: 13px;
+    }
+}
+
+.category-header-heading {
+    @media(max-width: 767.98px) {
+        float: none;
+        display: block;
+        border: 0;
+        padding: 0;
+        margin: 0 0 3px;
+        color: #000000;
+        font-size: 15px;
+        line-height: 1;
+        font-weight: 400;
+        text-transform: uppercase;
+    }
+}
+
+.category-header-descr {
+    @media(max-width: 767.98px) {
+        display: block;
+        border: 0;
+        padding: 0;
+        margin: 0;
+        color: #999999;
+        font-size: 10px;
+    }
 }
 
 .block__branding {
@@ -656,6 +719,9 @@ p {
     text-align: center;
     border-radius: 6px 0 6px 0;
     background-color: #bababa;
+    @media(max-width: 767.98px) {
+        display: none;
+    }
 }
 
 .tab-11 a {
@@ -721,12 +787,19 @@ p {
 .visible-xs,
 .visible-sm,
 .visible-md,
-.visible-lg {
+.visible-lg,
+.visible-xl {
     display: none !important;
 }
 
 .visible-xs {
     @media(max-width: 767.98px) {
+        display: block !important;
+    }
+}
+
+.visible-xl {
+    @media(max-width: 991.98px) {
         display: block !important;
     }
 }
@@ -768,6 +841,9 @@ p {
         display: inline-block;
         margin-right: 10px;
         color: #999999;
+    }
+    @media(max-width:767.98px) {
+        display: none;
     }
 }
 
@@ -822,6 +898,9 @@ p {
     &__body {
         padding: 15px;
         overflow: hidden;
+        @media(max-width: 767.98px) {
+            border-top: 1px solid #eeeeee;
+        }
     }
     a.toggle-filter {
         color: red;
@@ -829,7 +908,7 @@ p {
         right: 15px;
         top: 14px;
     }
-    .filter__button {
+    &__button {
         position: relative;
         display: block;
         padding: 5px 5px 5px 25px;
@@ -847,6 +926,22 @@ p {
             font-size: 13px;
             font-weight: bold;
             margin-bottom: 10px;
+            &::after {
+                position: absolute;
+                top: 7px;
+                left: 3px;
+                width: 14px;
+                height: 14px;
+                border: 1px solid #aaaaaa;
+                -webkit-border-radius: 2px;
+                -moz-border-radius: 2px;
+                border-radius: 2px;
+                content: " ";
+                font-family: FontAwesome;
+                font-size: 10px;
+                line-height: 13px;
+                text-align: center;
+            }
         }
         span {
             color: #a1a1a1;
@@ -869,14 +964,45 @@ p {
             display: inline-block;
             margin-right: 5px;
         }
+        @media(max-width:767.98px) {
+            margin: 0 5px 5px 0;
+            font-size: 12px;
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            border-radius: 3px;
+        }
     }
     &.filter-listing {
         .filter__button {
             padding: 5px 5px 5px 19px !important;
+            a {
+                &::after {
+                    border: 0 !important;
+                    content: "\f054" !important;
+                    font-size: 10px !important;
+                    top: 9px !important;
+                    color: #aaa !important;
+                }
+            }
         }
     }
     &+.filter {
         border-top: 2px solid #e5e5e5;
+    }
+    @media(max-width:767.98px) {
+        padding: 0;
+        &__title {
+            z-index: 2;
+            width: auto;
+            border-bottom: 0;
+            font-size: 13px;
+            font-weight: 500;
+            .filter__icon {
+                width: 15px;
+                margin-right: 3px;
+                font-size: 15px;
+            }
+        }
     }
 }
 

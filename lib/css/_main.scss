@@ -33,6 +33,34 @@
                     }
                 }
             }
+            .slick-arrow {
+                width: 40px;
+                height: 50px;
+                background-color: rgba(0, 0, 0, .5);
+                z-index: 1;
+                opacity: 0;
+            }
+            &:hover {
+                .slick-arrow {
+                    opacity: 1;
+                }
+            }
+            .slick-prev {
+                left: 0;
+                &::before {
+                    content: '\f053';
+                    font-family: fontawesome;
+                    color: #fff;
+                }
+            }
+            .slick-next {
+                right: 0;
+                &::before {
+                    content: '\f054';
+                    font-family: fontawesome;
+                    color: #fff;
+                }
+            }
             .slick-dots {
                 bottom: 0;
                 right: 0;
@@ -54,6 +82,9 @@
                         }
                     }
                 }
+            }
+            @media(max-width:767.98px) {
+                padding-bottom: 0;
             }
         }
         .promo-banner-right {
@@ -78,6 +109,9 @@
                     margin-top: 0;
                 }
             }
+            @media(min-width:768px) and (max-width:1199.98px) {
+                display: none;
+            }
         }
         .promo-banner-bottom {
             // margin: 27px 0px 0px 0px;
@@ -101,6 +135,20 @@
                 }
             }
         }
+        @media(max-width:991.98px) {
+            margin-left: 0;
+            width: 100%;
+            img {
+                max-height: auto;
+            }
+        }
+        @media(max-width:767.98px) {
+            width: auto;
+            height: 165px;
+            padding-bottom: 52%;
+            overflow: hidden;
+            margin-left: 0;
+        }
     }
 }
 
@@ -114,6 +162,9 @@
 
 .block__header {
     border-bottom: 1px solid #d2d2d2;
+    @media(max-width: 767.98px) {
+        position: relative;
+    }
 }
 
 .block-tab {
@@ -137,6 +188,9 @@
                 font-size: 17px;
                 color: #777777;
                 text-align: center;
+            }
+            @media(max-width:767.98px) {
+                margin-right: 10px;
             }
         }
     }
@@ -185,6 +239,9 @@
             .tab {
                 margin: 0;
                 padding: 0 15px;
+                @media(max-width: 767.98px) {
+                    width: 999em;
+                }
             }
             .tab-item {
                 a {
@@ -230,6 +287,9 @@
                 color: #fff;
                 vertical-align: middle;
                 white-space: nowrap;
+                @media(max-width: 767.98px) {
+                    font-size: 15px;
+                }
             }
         }
         .block__branding {
@@ -249,6 +309,17 @@
                     }
                 }
             }
+        }
+    }
+    .block__nav {
+        @media(max-width: 767.98px) {
+            display: none;
+        }
+    }
+    .block__tab {
+        @media(max-width: 767.98px) {
+            overflow: hidden;
+            margin: 0 0 -1px;
         }
     }
 }
@@ -321,6 +392,122 @@ h3.product__title {
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
+            }
+        }
+    }
+}
+
+.m-branding {
+    @media(max-width: 767.98px) {
+        margin: 0 0;
+        padding: 0 0;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+        background-color: #fff;
+        ul {
+            padding: 0;
+            margin-bottom: 0;
+            position: relative;
+            height: 100%;
+            z-index: 1;
+            display: flex;
+            transition-property: transform;
+            box-sizing: content-box;
+            transform: translate3d(0px, 0, 0);
+            list-style-type: none;
+            white-space: nowrap;
+            overflow-x: scroll;
+            &>li {
+                flex-shrink: 0;
+                float: left;
+                width: 60px !important;
+                text-align: center;
+                list-style-type: none;
+                &:not(:first-child) {
+                    margin-right: 7px;
+                }
+                a {
+                    display: block;
+                    padding: 10px 0;
+                    color: #626262;
+                    font-size: 9px;
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    outline: 0;
+                    white-space: initial;
+                    i {
+                        display: block;
+                        width: 40px;
+                        height: 40px;
+                        margin: 0 10px 10px;
+                        color: #fff;
+                        background-color: #afafaf;
+                        font-size: 18px;
+                        text-align: center;
+                        line-height: 40px;
+                        -webkit-border-radius: 100%;
+                        -moz-border-radius: 100%;
+                        border-radius: 100%;
+                    }
+                }
+            }
+        }
+        .branding {
+            &--an-uong {
+                i {
+                    background-color: #71BE11;
+                }
+            }
+            &--spa {
+                i {
+                    background-color: #ff6ec3;
+                }
+            }
+            &--giai-tri {
+                i {
+                    background-color: #4E40D3;
+                }
+            }
+            &--travel {
+                i {
+                    background-color: #f6911b;
+                }
+            }
+            &--buffet {
+                i {
+                    background-color: #FBC934;
+                }
+            }
+            &--massage {
+                i {
+                    background-color: #ad2bd6;
+                }
+            }
+            &--nha-khoa {
+                i {
+                    background-color: #3ebaee;
+                }
+            }
+            &--benh-vien {
+                i {
+                    background-color: #4d31c4;
+                }
+            }
+            &--hotel {
+                i {
+                    background-color: #06db47;
+                }
+            }
+            &--dao-tao {
+                i {
+                    background-color: #fe9037;
+                }
+            }
+            &--ticket {
+                i {
+                    background-color: #41099e;
+                }
             }
         }
     }

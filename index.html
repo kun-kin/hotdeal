@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tourest</title>
+    <title>Hotdeal</title>
     <link rel="shortcut icon" type="image/x-icon" href="./images/favicon.png">
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.1.2/css/all.css">
     <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
@@ -21,7 +21,123 @@
 </head>
 
 <body class="home">
-    <div class="wrapper">
+    <div class="wrapper" id="hd-container">
+        <div class="hd-menu hd-effect-4 visible-xs visible-sm">
+            <a href="javascript:;" class="toggle-nav toggle-nav--remove visible-xs visible-sm" data-target="#hd-container"><i class="fa-solid fa-xmark"></i></a>
+            <div class="hd-menu-container">
+                <div class="profile">
+                    <div class="profile__avatar">
+                        <img class="img-circle" src="//www.hotdeal.vn/assets/img/no-avatar.gif" alt="">
+                    </div>
+                    <div class="profile__info">
+                        <form id="formCity" method="post" action="/doi_dia_diem">
+                            <input type="hidden" name="redirect_url" value="/ha-noi/">
+                            <div class="dropdown dropdown--city">
+                                <a href="#" data-toggle="dropdown" aria-expanded="false">
+                                    <i class="fa-solid fa-location-dot"></i>&nbsp;
+                                    <span>Hà Nội</span>&nbsp;&nbsp;<i class="fa fa-caret-down"></i>
+                                </a>
+                                <ul id="city-test" class="dropdown-menu dropdown-menu-city">
+                                    <li city-code="437"><a href="javascript:void(0);"><i class="fa-solid fa-location-dot"></i> Hồ Chí Minh</a></li>
+                                    <li city-code="440"><a href="javascript:void(0);"><i class="fa-solid fa-location-dot"></i> Hà Nội</a></li>
+                                    <li city-code="999999"><a href="javascript:void(0);"><i class="fa-solid fa-location-dot"></i> Tỉnh Thành Khác</a></li>
+                                </ul>
+                            </div>
+                        </form>
+
+                        <div class="text-center" id="mobile_user_header">
+                            <ul class="profile__menu">
+                                <li><a rel="nofollow" href="./register.html">Đăng ký</a></li>
+                                <li>&nbsp; | &nbsp;</li>
+                                <li><a rel="nofollow" href="/login.html">Đăng nhập</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <nav class="side-nav">
+                    <ul class="nav-menu" style="padding: 10px 0; margin: 0;">
+                        <li class="nav-menu">
+                            <a href="">
+
+                                <i class="fa-regular fa-fire" style="background-color: #ed1c24; font-size:14px;"></i> KHUYẾN MÃI HOT
+                            </a>
+                        </li>
+                        <li class="nav-menu">
+                            <a href="">
+                                <i class="fa-regular fa-star" style="background-color: #71be0f; font-size:14px;"></i>Deal Nổi Bật
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <nav class="side-nav side-nav-branding">
+                    <ul class="branding__menu">
+
+                        <li class="branding__item branding branding--an-uong multicolumns">
+                            <a href="./category_main.html">
+                                <i class="fa-regular fa-utensils"></i> Ẩm Thực
+                            </a>
+
+                        </li>
+                        <li class="branding__item branding branding--spa multicolumns">
+                            <a href="">
+                                <i class="fa-regular fa-spa"></i>Spa &amp; Làm đẹp
+                            </a>
+
+                        </li>
+                        <li class="branding__item branding branding--giai-tri multicolumns">
+                            <a href="">
+                                <i class="fa-regular fa-film"></i> Giải trí &amp; Thể thao
+                            </a>
+                        </li>
+                        <li class="branding__item branding branding--travel multicolumns">
+                            <a href="">
+                                <i class="fa-regular fa-briefcase"></i> Tour du lịch
+                            </a>
+                        </li>
+                        <li class="branding__item branding branding--buffet multicolumns">
+                            <a href="">
+                                <i class="fa-regular fa-fork-knife"></i> Buffet
+                            </a>
+                        </li>
+                        <li class="branding__item branding branding--massage multicolumns">
+                            <a href="">
+                                <i class="fa-regular fa-sparkles"></i> Massgage nam nữ
+                            </a>
+                        </li>
+                        <li class="branding__item branding branding--nha-khoa multicolumns">
+                            <a href="">
+                                <i class="fa-regular fa-tooth"></i> Nha khoa
+                            </a>
+                        </li>
+                        <li class="branding__item branding branding--benh-vien multicolumns">
+                            <a href="">
+                                <i class="fa-regular fa-heart-pulse"></i> Bệnh viện &amp; Phòng khám
+                            </a>
+                        </li>
+                        <li class="branding__item branding branding--hotel multicolumns">
+                            <a href="">
+                                <i class="fa-regular fa-hotel"></i> Hotel &amp; Resort
+                            </a>
+                        </li>
+                        <li class="branding__item branding branding--dao-tao multicolumns">
+                            <a href="">
+                                <i class="fa-regular fa-user-tie-hair"></i> Đào tạo &amp; Hội thảo
+                            </a>
+                        </li>
+                        <li class="branding__item branding branding--ticket multicolumns">
+                            <a href="">
+                                <i class="fa-regular fa-ticket"></i> Vé sự kiện
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="hotline">
+                    <span class="hotline__text">HOTLINE</span>
+                    <span class="hotline__number">1900 6760</span>
+                </div>
+            </div>
+        </div>
+        <div class="hd-touch-layer"></div>
         <header class="header">
             <div id="top-bar" class="header-top top-bar">
                 <div class="container">
@@ -168,10 +284,15 @@
             <div class="header-main">
                 <div class="container">
                     <div class="row">
+                        <a href="#" class="toggle-nav visible-xs visible-sm" data-target="#hd-container">
+                            <i class="fa-solid fa-bars"></i>
+                        </a>
                         <div class="logo-wrapper col-md-4">
                             <a href="./index.html">
                                 <img src="./images/logo-hotdeal.png" alt="" class="hidden-xs hidden-sm logo" style="margin:0 auto;">
-
+                            </a>
+                            <a href="./index.html">
+                                <img src="./images/logo-hotdeal.png" alt="" class="visible-xs visible-sm logo" style="margin:0 auto;">
                             </a>
                         </div>
                         <div class="search-area col-md-6" style="padding-left:10px;">
@@ -209,7 +330,7 @@
                                     <a href="#" data-toggle="dropdown">
                                         <i class="fa-light fa-cart-shopping-fast"></i>
                                         <span class="circle">0</span>
-                                        <span class="hidden-xs hidden-sm">Giỏ hàng</span></a>
+                                        <span class="hidden-lg hidden-xs hidden-sm">Giỏ hàng</span></a>
                                     <div class="dropdown-menu dropdown-cart" role="menu">
                                         <div class="minicart__wrapper">
                                             <div class="minicart__item">
@@ -724,7 +845,7 @@
 
                             </a>
                         </li>
-                        <li class="visible-affix">
+                        <li class="visible-affix xl-vx-100">
                             <div class="search-area">
                                 <form action="">
                                     <div class="search-box form-inline">
@@ -758,7 +879,7 @@
                     </ul>
                     <ul class="nav secondary-nav ">
                         <li class="nav-cart">
-                            <a href="#" data-toggle="dropdown" aria-expanded="false"><i class="fa-light fa-cart-shopping-fast"></i><span class="circle">0</span> <span class="hd-cart-text">Giỏ hàng</span></a>
+                            <a href="#" data-toggle="dropdown" aria-expanded="false"><i class="fa-light fa-cart-shopping-fast"></i><span class="circle">0</span> <span class="hd-cart-text hidden-lg">Giỏ hàng</span></a>
                             <div class="dropdown-menu dropdown-cart" role="menu">
                                 <div class="minicart__wrapper"></div>
 
@@ -876,6 +997,72 @@
                     </div>
                 </div>
             </section>
+            <div class="m-branding visible-xs visible-sm">
+                <ul class="branding__menu">
+                    <li class="branding__item item-promotion-hot hidden-sm hidden-xs">
+                        <a href="./promotions.html">
+                            <i class="fa-regular fa-fire"></i>Khuyến mãi HOT
+                        </a>
+                    </li>
+                    <li class="branding__item branding branding--an-uong multicolumns">
+                        <a href="./category_main.html">
+                            <i class="fa-regular fa-utensils"></i> Ẩm Thực
+                        </a>
+
+                    </li>
+                    <li class="branding__item branding branding--spa multicolumns">
+                        <a href="">
+                            <i class="fa-regular fa-spa"></i>Spa &amp; Làm đẹp
+                        </a>
+
+                    </li>
+                    <li class="branding__item branding branding--giai-tri multicolumns">
+                        <a href="">
+                            <i class="fa-regular fa-film"></i> Giải trí &amp; Thể thao
+                        </a>
+                    </li>
+                    <li class="branding__item branding branding--travel multicolumns">
+                        <a href="">
+                            <i class="fa-regular fa-briefcase"></i> Tour du lịch
+                        </a>
+                    </li>
+                    <li class="branding__item branding branding--buffet multicolumns">
+                        <a href="">
+                            <i class="fa-regular fa-fork-knife"></i> Buffet
+                        </a>
+                    </li>
+                    <li class="branding__item branding branding--massage multicolumns">
+                        <a href="">
+                            <i class="fa-regular fa-sparkles"></i> Massgage nam nữ
+                        </a>
+                    </li>
+                    <li class="branding__item branding branding--nha-khoa multicolumns">
+                        <a href="">
+                            <i class="fa-regular fa-tooth"></i> Nha khoa
+                        </a>
+                    </li>
+                    <li class="branding__item branding branding--benh-vien multicolumns">
+                        <a href="">
+                            <i class="fa-regular fa-heart-pulse"></i> Bệnh viện &amp; Phòng khám
+                        </a>
+                    </li>
+                    <li class="branding__item branding branding--hotel multicolumns">
+                        <a href="">
+                            <i class="fa-regular fa-hotel"></i> Hotel &amp; Resort
+                        </a>
+                    </li>
+                    <li class="branding__item branding branding--dao-tao multicolumns">
+                        <a href="">
+                            <i class="fa-regular fa-user-tie-hair"></i> Đào tạo &amp; Hội thảo
+                        </a>
+                    </li>
+                    <li class="branding__item branding branding--ticket multicolumns">
+                        <a href="">
+                            <i class="fa-regular fa-ticket"></i> Vé sự kiện
+                        </a>
+                    </li>
+                </ul>
+            </div>
             <div class="container">
                 <section class="block block-tab tab-style-1 mt-3">
                     <div class="block-header clearfix">
@@ -895,8 +1082,8 @@
                     </div>
                     <div class="block-content tab-content clearfix">
                         <div role="tabpanel" class="tab-pane active" id="tab0">
-                            <div class="row products">
-                                <div class="col-lg-3 col-md-6 product-wrapper">
+                            <div class="row products w-100">
+                                <div class="col-lg-3 col-md-6 col-sm-6 product-wrapper">
                                     <div class="product">
                                         <div class="product-image">
                                             <a href="./category-details.html">
@@ -942,7 +1129,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-3 col-md-6 product-wrapper">
+                                <div class="col-lg-3 col-md-6 col-sm-6 product-wrapper">
                                     <div class="product">
                                         <div class="product-image">
                                             <a href="./category-details.html">
@@ -988,7 +1175,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-3 col-md-6 product-wrapper">
+                                <div class="col-lg-3 col-md-6 col-sm-6 product-wrapper">
                                     <div class="product">
                                         <div class="product-image">
                                             <a href="./category-details.html">
@@ -1034,7 +1221,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-3 col-md-6 product-wrapper">
+                                <div class="col-lg-3 col-md-6 col-sm-6 product-wrapper">
                                     <div class="product">
                                         <div class="product-image">
                                             <a href="./category-details.html">
@@ -1083,8 +1270,8 @@
                             </div>
                         </div>
                         <div role="tabpanel" class="tab-pane" id="tab1">
-                            <div class="row products">
-                                <div class="col-lg-3 col-md-6 product-wrapper">
+                            <div class="row products w-100">
+                                <div class="col-lg-3 col-md-6 col-sm-6 product-wrapper">
                                     <div class="product">
                                         <div class="product-image">
                                             <a href="./category-details.html">
@@ -1130,7 +1317,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-3 col-md-6 product-wrapper">
+                                <div class="col-lg-3 col-md-6 col-sm-6 product-wrapper">
                                     <div class="product">
                                         <div class="product-image">
                                             <a href="./category-details.html">
@@ -1176,7 +1363,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-3 col-md-6 product-wrapper">
+                                <div class="col-lg-3 col-md-6 col-sm-6 product-wrapper">
                                     <div class="product">
                                         <div class="product-image">
                                             <a href="./category-details.html">
@@ -1222,7 +1409,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-3 col-md-6 product-wrapper">
+                                <div class="col-lg-3 col-md-6 col-sm-6 product-wrapper">
                                     <div class="product">
                                         <div class="product-image">
                                             <a href="./category-details.html">
@@ -1271,8 +1458,8 @@
                             </div>
                         </div>
                         <div role="tabpanel" class="tab-pane" id="tab2">
-                            <div class="row products">
-                                <div class="col-lg-3 col-md-6 product-wrapper">
+                            <div class="row products w-100">
+                                <div class="col-lg-3 col-md-6 col-sm-6 product-wrapper">
                                     <div class="product">
                                         <div class="product-image">
                                             <a href="./category-details.html">
@@ -1318,7 +1505,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-3 col-md-6 product-wrapper">
+                                <div class="col-lg-3 col-md-6 col-sm-6 product-wrapper">
                                     <div class="product">
                                         <div class="product-image">
                                             <a href="./category-details.html">
@@ -1364,7 +1551,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-3 col-md-6 product-wrapper">
+                                <div class="col-lg-3 col-md-6 col-sm-6 product-wrapper">
                                     <div class="product">
                                         <div class="product-image">
                                             <a href="./category-details.html">
@@ -1410,7 +1597,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-3 col-md-6 product-wrapper">
+                                <div class="col-lg-3 col-md-6 col-sm-6 product-wrapper">
                                     <div class="product">
                                         <div class="product-image">
                                             <a href="./category-details.html">
@@ -1500,8 +1687,8 @@
                     </div>
                     <div class="block-content tab-content clearfix">
                         <div role="tabpanel" class="tab-pane active" id="tab11-moi">
-                            <div class="row products">
-                                <div class="col-lg-3 col-md-6 product-wrapper">
+                            <div class="row products w-100">
+                                <div class="col-lg-3 col-md-6 col-sm-6 product-wrapper">
                                     <div class="product">
                                         <div class="product-image">
                                             <a href="">
@@ -1547,7 +1734,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-3 col-md-6 product-wrapper">
+                                <div class="col-lg-3 col-md-6 col-sm-6 product-wrapper">
                                     <div class="product">
                                         <div class="product-image">
                                             <a href="">
@@ -1593,7 +1780,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-3 col-md-6 product-wrapper">
+                                <div class="col-lg-3 col-md-6 col-sm-6 product-wrapper">
                                     <div class="product">
                                         <div class="product-image">
                                             <a href="">
@@ -1639,7 +1826,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-3 col-md-6 product-wrapper">
+                                <div class="col-lg-3 col-md-6 col-sm-6 product-wrapper">
                                     <div class="product">
                                         <div class="product-image">
                                             <a href="">
@@ -1688,8 +1875,8 @@
                             </div>
                         </div>
                         <div role="tabpanel" class="tab-pane" id="tab11-ban-chay">
-                            <div class="row products">
-                                <div class="col-lg-3 col-md-6 product-wrapper">
+                            <div class="row products w-100">
+                                <div class="col-lg-3 col-md-6 col-sm-6 product-wrapper">
                                     <div class="product">
                                         <div class="product-image">
                                             <a href="">
@@ -1735,7 +1922,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-3 col-md-6 product-wrapper">
+                                <div class="col-lg-3 col-md-6 col-sm-6 product-wrapper">
                                     <div class="product">
                                         <div class="product-image">
                                             <a href="">
@@ -1781,7 +1968,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-3 col-md-6 product-wrapper">
+                                <div class="col-lg-3 col-md-6 col-sm-6 product-wrapper">
                                     <div class="product">
                                         <div class="product-image">
                                             <a href="">
@@ -1827,7 +2014,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-3 col-md-6 product-wrapper">
+                                <div class="col-lg-3 col-md-6 col-sm-6 product-wrapper">
                                     <div class="product">
                                         <div class="product-image">
                                             <a href="">
@@ -1876,8 +2063,8 @@
                             </div>
                         </div>
                         <div role="tabpanel" class="tab-pane" id="tab11-gia-tot">
-                            <div class="row products">
-                                <div class="col-lg-3 col-md-6 product-wrapper">
+                            <div class="row products w-100">
+                                <div class="col-lg-3 col-md-6 col-sm-6 product-wrapper">
                                     <div class="product">
                                         <div class="product-image">
                                             <a href="">
@@ -1923,7 +2110,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-3 col-md-6 product-wrapper">
+                                <div class="col-lg-3 col-md-6 col-sm-6 product-wrapper">
                                     <div class="product">
                                         <div class="product-image">
                                             <a href="">
@@ -1969,7 +2156,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-3 col-md-6 product-wrapper">
+                                <div class="col-lg-3 col-md-6 col-sm-6 product-wrapper">
                                     <div class="product">
                                         <div class="product-image">
                                             <a href="">
@@ -2015,7 +2202,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-3 col-md-6 product-wrapper">
+                                <div class="col-lg-3 col-md-6 col-sm-6 product-wrapper">
                                     <div class="product">
                                         <div class="product-image">
                                             <a href="">
@@ -2108,8 +2295,8 @@
                     </div>
                     <div class="block-content tab-content clearfix">
                         <div role="tabpanel" class="tab-pane active" id="tab11-moi">
-                            <div class="row products">
-                                <div class="col-lg-3 col-md-6 product-wrapper">
+                            <div class="row products w-100">
+                                <div class="col-lg-3 col-md-6 col-sm-6 product-wrapper">
                                     <div class="product">
                                         <div class="product-image">
                                             <a href="">
@@ -2155,7 +2342,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-3 col-md-6 product-wrapper">
+                                <div class="col-lg-3 col-md-6 col-sm-6 product-wrapper">
                                     <div class="product">
                                         <div class="product-image">
                                             <a href="">
@@ -2201,7 +2388,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-3 col-md-6 product-wrapper">
+                                <div class="col-lg-3 col-md-6 col-sm-6 product-wrapper">
                                     <div class="product">
                                         <div class="product-image">
                                             <a href="">
@@ -2247,7 +2434,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-3 col-md-6 product-wrapper">
+                                <div class="col-lg-3 col-md-6 col-sm-6 product-wrapper">
                                     <div class="product">
                                         <div class="product-image">
                                             <a href="">
@@ -2296,8 +2483,8 @@
                             </div>
                         </div>
                         <div role="tabpanel" class="tab-pane" id="tab11-ban-chay">
-                            <div class="row products">
-                                <div class="col-lg-3 col-md-6 product-wrapper">
+                            <div class="row products w-100">
+                                <div class="col-lg-3 col-md-6 col-sm-6 product-wrapper">
                                     <div class="product">
                                         <div class="product-image">
                                             <a href="">
@@ -2343,7 +2530,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-3 col-md-6 product-wrapper">
+                                <div class="col-lg-3 col-md-6 col-sm-6 product-wrapper">
                                     <div class="product">
                                         <div class="product-image">
                                             <a href="">
@@ -2389,7 +2576,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-3 col-md-6 product-wrapper">
+                                <div class="col-lg-3 col-md-6 col-sm-6 product-wrapper">
                                     <div class="product">
                                         <div class="product-image">
                                             <a href="">
@@ -2435,7 +2622,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-3 col-md-6 product-wrapper">
+                                <div class="col-lg-3 col-md-6 col-sm-6 product-wrapper">
                                     <div class="product">
                                         <div class="product-image">
                                             <a href="">
@@ -2484,8 +2671,8 @@
                             </div>
                         </div>
                         <div role="tabpanel" class="tab-pane" id="tab11-gia-tot">
-                            <div class="row products">
-                                <div class="col-lg-3 col-md-6 product-wrapper">
+                            <div class="row products w-100">
+                                <div class="col-lg-3 col-md-6 col-sm-6 product-wrapper">
                                     <div class="product">
                                         <div class="product-image">
                                             <a href="">
@@ -2531,7 +2718,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-3 col-md-6 product-wrapper">
+                                <div class="col-lg-3 col-md-6 col-sm-6 product-wrapper">
                                     <div class="product">
                                         <div class="product-image">
                                             <a href="">
@@ -2577,7 +2764,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-3 col-md-6 product-wrapper">
+                                <div class="col-lg-3 col-md-6 col-sm-6 product-wrapper">
                                     <div class="product">
                                         <div class="product-image">
                                             <a href="">
@@ -2623,7 +2810,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-3 col-md-6 product-wrapper">
+                                <div class="col-lg-3 col-md-6 col-sm-6 product-wrapper">
                                     <div class="product">
                                         <div class="product-image">
                                             <a href="">
@@ -2892,6 +3079,10 @@
     <script>
         new WOW().init();
     </script>
+
+</body>
+
+</html>cript>
 
 </body>
 
