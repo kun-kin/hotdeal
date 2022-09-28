@@ -1127,6 +1127,24 @@ ul.pagination {
             font-size: 12px;
         }
     }
+    @media(max-width:767.98px) {
+        width: 300px;
+        margin-bottom: 15px;
+        &__summary {
+            padding: 0 10px;
+            margin: 10px 0;
+            width: 135px;
+            font-size: 13px
+        }
+        .summary__rating {
+            margin-top: 8px;
+            font-size: 12px;
+        }
+        &__details {
+            padding: 0 5px 0 10px;
+            margin: 10px 0;
+        }
+    }
 }
 
 .stars {

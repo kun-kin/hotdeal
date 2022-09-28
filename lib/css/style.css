@@ -2790,6 +2790,26 @@ ul.pagination > li.active a:hover {
   color: #bababa;
   font-size: 12px;
 }
+@media (max-width: 767.98px) {
+  .rating-box {
+    width: 300px;
+    margin-bottom: 15px;
+  }
+  .rating-box__summary {
+    padding: 0 10px;
+    margin: 10px 0;
+    width: 135px;
+    font-size: 13px;
+  }
+  .rating-box .summary__rating {
+    margin-top: 8px;
+    font-size: 12px;
+  }
+  .rating-box__details {
+    padding: 0 5px 0 10px;
+    margin: 10px 0;
+  }
+}
 
 .stars {
   display: inline-block;
