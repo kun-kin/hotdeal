@@ -335,7 +335,8 @@
 
 nav.main-nav {
     height: 42px;
-    background-color: #ed1c24;
+    // background-color: #ed1c24;
+    background-color: var(--primary-color);
     a {
         color: #fff;
         display: block;
@@ -350,7 +351,9 @@ nav.main-nav {
             &:hover,
             &.active {
                 a {
-                    background-color: #ca181f;
+                    // background-color: #ca181f;
+                    background-color: #fff;
+                    color: #000;
                     text-decoration: none;
                 }
             }
@@ -367,7 +370,8 @@ nav.main-nav {
                 &:focus,
                 &.active,
                 &:hover {
-                    background-color: #ca181f;
+                    // background-color: #ca181f;
+                    background-color: #fff;
                     text-decoration: none;
                 }
             }

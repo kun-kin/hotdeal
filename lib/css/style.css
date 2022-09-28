@@ -323,7 +323,7 @@
 
 nav.main-nav {
   height: 42px;
-  background-color: #ed1c24;
+  background-color: var(--primary-color);
 }
 nav.main-nav a {
   color: #fff;
@@ -337,7 +337,8 @@ nav.main-nav .nav > li {
   float: left;
 }
 nav.main-nav .nav > li:hover a, nav.main-nav .nav > li.active a {
-  background-color: #ca181f;
+  background-color: #fff;
+  color: #000;
   text-decoration: none;
 }
 nav.main-nav .nav > li > a {
@@ -352,7 +353,7 @@ nav.main-nav .nav > li > a {
   position: relative;
 }
 nav.main-nav .nav > li > a:focus, nav.main-nav .nav > li > a.active, nav.main-nav .nav > li > a:hover {
-  background-color: #ca181f;
+  background-color: #fff;
   text-decoration: none;
 }
 nav.main-nav .main-nav {
@@ -1681,7 +1682,7 @@ h3.product__title {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background: red;
+  background: var(--primary-color);
   width: 35px;
   height: 35px;
   color: #fff;
@@ -2602,6 +2603,11 @@ ul.pagination > li.active a:hover {
   height: 300px;
   overflow-x: hidden;
 }
+@media (max-width: 767.98px) {
+  .maps-address {
+    height: auto;
+  }
+}
 
 #accordion {
   overflow: hidden;
@@ -2774,9 +2780,20 @@ ul.pagination > li.active a:hover {
   width: 70px;
   font-size: 12px;
 }
+@media (max-width: 767.98px) {
+  .rating-box .rrow__label {
+    width: 40px;
+  }
+}
 .rating-box .rrow__percent {
   width: 180px;
   padding: 8px 20px 0 0;
+}
+@media (max-width: 767.98px) {
+  .rating-box .rrow__percent {
+    width: 80px;
+    padding-right: 10px;
+  }
 }
 .rating-box .rrow__counting {
   display: inline-block;
@@ -2785,10 +2802,22 @@ ul.pagination > li.active a:hover {
   color: #999999;
   font-size: 12px;
 }
+@media (max-width: 767.98px) {
+  .rating-box .rrow__counting {
+    width: 25px;
+    margin-right: 0;
+    text-align: right;
+  }
+}
 .rating-box .rrow__descr {
   display: inline-block;
   color: #bababa;
   font-size: 12px;
+}
+@media (max-width: 767.98px) {
+  .rating-box .rrow__descr {
+    display: none;
+  }
 }
 @media (max-width: 767.98px) {
   .rating-box {
@@ -2805,10 +2834,6 @@ ul.pagination > li.active a:hover {
     margin-top: 8px;
     font-size: 12px;
   }
-  .rating-box__details {
-    padding: 0 5px 0 10px;
-    margin: 10px 0;
-  }
 }
 
 .stars {
@@ -2824,6 +2849,12 @@ ul.pagination > li.active a:hover {
   padding: 0 5px 0 20px;
   margin: 25px 0;
   border-left: 1px dashed #e6e6e6;
+}
+@media (max-width: 767.98px) {
+  .rating-box__details {
+    padding: 0 5px 0 10px;
+    margin: 10px 0;
+  }
 }
 
 @media (max-width: 767.98px) {
@@ -3189,6 +3220,7 @@ form.form--general {
 }
 
 :root {
+  --primary-color: #0e6000;
   --red-color: #ed1c24;
 }
 

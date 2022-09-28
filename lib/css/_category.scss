@@ -934,6 +934,9 @@ ul.pagination {
 .maps-address {
     height: 300px;
     overflow-x: hidden;
+    @media(max-width: 767.98px) {
+        height: auto;
+    }
 }
 
 #accordion {
@@ -1109,10 +1112,17 @@ ul.pagination {
             margin: 2px 0 0 0;
             width: 70px;
             font-size: 12px;
+            @media(max-width: 767.98px) {
+                width: 40px;
+            }
         }
         &__percent {
             width: 180px;
             padding: 8px 20px 0 0;
+            @media(max-width: 767.98px) {
+                width: 80px;
+                padding-right: 10px;
+            }
         }
         &__counting {
             display: inline-block;
@@ -1120,11 +1130,19 @@ ul.pagination {
             margin-right: 15px;
             color: #999999;
             font-size: 12px;
+            @media(max-width: 767.98px) {
+                width: 25px;
+                margin-right: 0;
+                text-align: right;
+            }
         }
         &__descr {
             display: inline-block;
             color: #bababa;
             font-size: 12px;
+            @media(max-width: 767.98px) {
+                display: none;
+            }
         }
     }
     @media(max-width:767.98px) {
@@ -1139,10 +1157,6 @@ ul.pagination {
         .summary__rating {
             margin-top: 8px;
             font-size: 12px;
-        }
-        &__details {
-            padding: 0 5px 0 10px;
-            margin: 10px 0;
         }
     }
 }
@@ -1160,6 +1174,10 @@ ul.pagination {
     padding: 0 5px 0 20px;
     margin: 25px 0;
     border-left: 1px dashed #e6e6e6;
+    @media(max-width: 767.98px) {
+        padding: 0 5px 0 10px;
+        margin: 10px 0;
+    }
 }
 
 #binh-luan {
