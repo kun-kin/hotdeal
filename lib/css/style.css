@@ -3276,6 +3276,28 @@ form.form--general {
 .progress-steps > li.progress-last::after {
   display: none;
 }
+@media (max-width: 1130px) {
+  .progress-steps {
+    width: 660px;
+  }
+}
+@media (max-width: 991.98px) {
+  .progress-steps {
+    width: 500px;
+  }
+}
+@media (max-width: 767.98px) {
+  .progress-steps {
+    position: relative;
+    width: 300px;
+    margin-bottom: 15px;
+    z-index: 8;
+  }
+  .progress-steps li span,
+.progress-steps li a {
+    display: none;
+  }
+}
 
 .box--no-padding {
   padding: 0;
@@ -3288,17 +3310,6 @@ form.form--general {
   width: 100%;
   max-width: 100%;
   margin-bottom: 20px;
-}
-.table--checkout {
-  margin: 0;
-}
-.table--checkout > tbody > tr > td.image {
-  width: 1%;
-  padding-right: 0;
-}
-.table--checkout > tbody > tr > td.image img {
-  float: left;
-  max-width: 60px;
 }
 .table--listing thead tr td,
 .table--listing thead tr th,
@@ -3315,6 +3326,14 @@ form.form--general {
   font-size: 13px;
   font-weight: 400;
 }
+@media (max-width: 767.98px) {
+  .table--listing thead > tr > th {
+    display: none;
+  }
+  .table--listing thead > tr > th.items0count {
+    display: block;
+  }
+}
 .table--listing tbody > tr > td {
   border-top: 0;
 }
@@ -3327,15 +3346,86 @@ form.form--general {
 .table--listing tbody > tr.sep-row td hr {
   margin: 0;
 }
+.table--checkout {
+  margin: 0;
+}
+@media (max-width: 767.98px) {
+  .table--checkout > tbody > tr > td {
+    display: block;
+    padding: 0 10px;
+  }
+  .table--checkout > tbody > tr > td.name {
+    padding-right: 50px;
+  }
+  .table--checkout > tbody > tr > td.discount, .table--checkout > tbody > tr > td.total {
+    display: none;
+  }
+  .table--checkout > tbody > tr > td.unit label {
+    color: #71be0f;
+  }
+  .table--checkout > tbody > tr > td.action {
+    position: absolute;
+    padding: 0;
+    right: 10px;
+    top: 10px;
+  }
+}
+.table--checkout > tbody > tr > td.image {
+  width: 1%;
+  padding-right: 0;
+}
+.table--checkout > tbody > tr > td.image img {
+  float: left;
+  max-width: 60px;
+}
+@media (max-width: 767.98px) {
+  .table--checkout > tbody > tr > td.image {
+    position: absolute;
+    top: 4px;
+    left: 0;
+    padding: 10px 10px;
+    width: 60px;
+  }
+  .table--checkout > tbody > tr > td.image img {
+    max-width: 40px;
+    max-height: 40px;
+  }
+}
+@media (max-width: 767.98px) {
+  .table--checkout > tbody > tr {
+    position: relative;
+    display: block;
+    padding: 10px 0 10px 50px;
+  }
+}
 
 .content-sidebar--2 .content {
   float: left;
   width: 845px;
 }
+@media (max-width: 1023.98px) {
+  .content-sidebar--2 .content {
+    float: none !important;
+    width: auto !important;
+    margin: 0;
+  }
+}
 .content-sidebar--2 .sidebar {
   float: left;
   width: 310px;
   margin-left: 25px;
+}
+@media (max-width: 1023.98px) {
+  .content-sidebar--2 .sidebar {
+    float: none !important;
+    width: auto !important;
+    margin: 0;
+  }
+}
+@media (min-width: 1024px) {
+  .content-sidebar--2 {
+    display: flex !important;
+  }
 }
 
 .order-summary {
@@ -3408,7 +3498,7 @@ form.form--general {
   color: #666666;
 }
 .box__footer .btn-lg {
-  width: 280px;
+  min-width: 280px;
 }
 .box__footer::before, .box__footer::after {
   content: "";
@@ -3597,6 +3687,25 @@ form.form--general {
   color: #ed1c24;
   font-size: 14px;
   margin: 5px 0px 0px;
+}
+
+@media (max-width: 767.98px) {
+  .page-checkout .content .box__header .btn--back {
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 0;
+    height: 40px;
+    padding: 0 12px;
+    font-size: 30px;
+    line-height: 32px;
+    color: #000;
+  }
+}
+.page-checkout .content .box__footer .btn {
+  float: none !important;
+  display: block;
+  width: 100%;
 }
 
 * {

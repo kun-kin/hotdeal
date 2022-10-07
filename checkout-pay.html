@@ -370,10 +370,10 @@
                                 <li data-step="1" class="is-complete">
                                     <a href="./shopping-cart.html" class="">Giỏ hàng</a>
                                 </li>
-                                <li data-step="2" class="is-active">
+                                <li data-step="2" class="is-complete">
                                     <a href="./checkout.html" class="">Thông tin giao hàng</a>
                                 </li>
-                                <li data-step="3" class="progress-last">
+                                <li data-step="3" class="is-active progress-last">
                                     <span>Thanh toán</span>
                                 </li>
                             </ol>
@@ -390,15 +390,15 @@
                         <li data-step="1" class="is-complete">
                             <a href="./shopping-cart.html" class="">Giỏ hàng</a>
                         </li>
-                        <li data-step="2" class="is-active">
+                        <li data-step="2" class="is-complete">
                             <a href="./checkout.html" class="">Thông tin giao hàng</a>
                         </li>
-                        <li data-step="3" class="progress-last">
+                        <li data-step="3" class="is-active progress-last">
                             <span>Thanh toán</span>
                         </li>
                     </ol>
                 </div>
-                <div class="content-sidebar--2 d-flex">
+                <div class="content-sidebar--2 d-block">
                     <div class="content">
                         <form action="" id="form-dat-hang" class="form form-blocking">
                             <div class="box">
@@ -422,7 +422,7 @@
                                                 </div>
                                                 <div class="shipping-method">
                                                     <label for="shipping-default">
-                                                        <input type="radio" name="shipping" id="shipping-default">
+                                                        <input type="radio" name="shipping" id="shipping-default" checked>
                                                         <img src="https://www.hotdeal.vn/assets/img/shipping-evoucher.png" alt="">
                                                         Nhận
                                                         E-voucher qua tin nhắn SMS/Email
@@ -455,21 +455,21 @@
                                                 <div class="col-md-6">
                                                     <h5>HÌNH THỨC THANH TOÁN</h5>
                                                     <div class="order-info order-shippings">
-                                                        <div class="padbo payment-method" id="">
+                                                        <div class="padbo payment-method" id="" data-shipping-id="0">
                                                             <label for="payment-method-shoppee">
-                                                                <input type="radio" name="payment" id="payment-method-shoppee">
+                                                                <input type="radio" name="payment" id="payment-method-shoppee" checked>
                                                                 <img src="https://www.hotdeal.vn/assets/img/payment-24.png" alt="">
                                                                 Thanh toán ShoppePay
                                                             </label>
                                                         </div>
-                                                        <div class="padbo payment-method" id="">
+                                                        <div class="padbo payment-method" id="" data-shipping-id="0">
                                                             <label for="payment-method-smartpay">
                                                                 <input type="radio" name="payment" id="payment-method-smartpay">
                                                                 <img src="https://www.hotdeal.vn/assets/img/payment-23.png" alt="">
                                                                 Thanh toán SmartPay
                                                             </label>
                                                         </div>
-                                                        <div class="padbo payment-method" id="">
+                                                        <div class="padbo payment-method" id="" data-shipping-id="0">
                                                             <label for="payment-method-onepay">
                                                                 <input type="radio" name="payment" id="payment-method-onepay">
                                                                 <img src="https://www.hotdeal.vn/assets/img/payment-18.png" alt="">
@@ -485,8 +485,7 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-
-                                                        <div class="padbo payment-method disabled" id="">
+                                                        <div class="padbo payment-method disabled" id="" data-shipping-id="1">
                                                             <label for="payment-method-cost">
                                                                 <input type="radio" name="payment" id="payment-method-cost">
                                                                 <img src="https://www.hotdeal.vn/assets/img/payment-6.png" alt="">
@@ -496,35 +495,74 @@
                                                                 <p>Thanh toán cho <strong>Nhân viên VNPOST</strong> khi nhận voucher. Không áp dụng tích điểm thưởng.</p>
                                                             </label>
                                                         </div>
-                                                        <div class="padbo payment-method" id="">
+                                                        <div class="padbo payment-method" id="" data-shipping-id="0">
                                                             <label for="payment-method-vnpay">
                                                                 <input type="radio" name="payment" id="payment-method-vnpay">
                                                                 <img src="https://www.hotdeal.vn/assets/img/payment-17.png" alt="">
                                                                 VNPAY QR-CODE
                                                             </label>
                                                         </div>
-                                                        <div class="padbo payment-method" id="">
+                                                        <div class="padbo payment-method" id="" data-shipping-id="0">
                                                             <label for="payment-method-atmpayoo">
                                                                 <input type="radio" name="payment" id="payment-method-atmpayoo">
                                                                 <img src="https://www.hotdeal.vn/assets/img/payment-19.png" alt="">
                                                                 Thẻ ATM nội địa qua Payoo
                                                             </label>
                                                         </div>
-                                                        <div class="padbo payment-method" id="">
+                                                        <div class="padbo payment-method" id="" data-shipping-id="0">
                                                             <label for="payment-method-visapayoo">
                                                                 <input type="radio" name="payment" id="payment-method-visapayoo">
                                                                 <img src="https://www.hotdeal.vn/assets/img/payment-20.png" alt="">
                                                                 Thẻ Visa/MasterCard/JCB qua Payoo 
                                                             </label>
                                                         </div>
-                                                        <div class="padbo payment-method" id="">
+                                                        <div class="padbo payment-method disabled" id="" data-shipping-id="1">
+                                                            <label for="payment-method-bankcast">
+                                                                <input type="radio" name="payment" id="payment-method-bankcast">
+                                                                <img src="https://www.hotdeal.vn/assets/img/payment-21.png" alt="">
+                                                                Chuyển khoản ngân hàng
+                                                            </label>
+                                                            <div class="" data-order="bank-account-info" style="display: none;">
+                                                                <div style="width: 100%; border-bottom: 1px dashed #cccccc ! important; padding-bottom: 10px; margin: 0px 0px 10px;font-size: 14px;">
+                                                                    <p>Quý khách vui lòng chuyển khoản qua ngân hàng:</p>
+                                                                </div>
+                                                                <table style="font-size: 12px;">
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td width="36%" align="left">Ngân hàng:</td>
+                                                                            <td style="font-weight: bold;">Vietcombank - Chi nhánh Hàm Nghi</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td align="left">Số tài khoản:</td>
+                                                                            <td style="font-weight: bold;">0071000635144</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td align="left">Tên tài khoản:</td>
+                                                                            <td style="font-weight: bold;">Công ty CP Hotdeal</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td align="left">Địa chỉ chi nhánh:</td>
+                                                                            <td style="font-weight: bold;">132 Hàm Nghi, P. Bến Thành, Quận 1, TP.HCM</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>Ghi chú chuyển khoản:</td>
+                                                                            <td style="font-weight: bold;">"Thanh toán ĐH: [DH] - SĐT: [SDT]"</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                                <div style="width: 100%; border-top: 1px dashed #cccccc ! important; margin: 10px 0px;font-size: 12px;">
+                                                                    <p style="font-style: italic; padding-top: 10px;">Quý khách vui lòng điền chính xác thông tin chuyển khoản để bộ phận chăm sóc khách hàng Hotdeal thực hiện xác nhận đơn hàng nhanh chóng</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="padbo payment-method" id="" data-shipping-id="0">
                                                             <label for="payment-method-momo">
                                                                 <input type="radio" name="payment" id="payment-method-momo">
                                                                 <img src="https://www.hotdeal.vn/assets/img/payment-16.png" alt="">
                                                                 Ví điện tử MoMo 
                                                             </label>
                                                         </div>
-                                                        <div class="padbo payment-method" id="">
+                                                        <div class="padbo payment-method" id="" data-shipping-id="0">
                                                             <label for="payment-method-payoolive">
                                                                 <input type="radio" name="payment" id="payment-method-payoolive">
                                                                 <img src="https://www.hotdeal.vn/assets/img/payment-21.png" alt="">
