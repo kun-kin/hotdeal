@@ -3702,10 +3702,12 @@ form.form--general {
     color: #000;
   }
 }
-.page-checkout .content .box__footer .btn {
-  float: none !important;
-  display: block;
-  width: 100%;
+@media (max-width: 767.98px) {
+  .page-checkout .content .box__footer .btn {
+    float: none !important;
+    display: block;
+    width: 100%;
+  }
 }
 
 * {
