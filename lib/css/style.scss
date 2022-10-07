@@ -22,6 +22,7 @@
 @import "footer";
 @import "category";
 @import "register";
+@import "checkout";
 * {
     margin: 0;
     padding: 0;
@@ -183,6 +184,14 @@ p {
     }
 }
 
+.btn-sm,
+.btn-group-sm>.btn {
+    padding: 5px 10px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 0px;
+}
+
 .btn-success {
     color: #ffffff;
     background-color: #71be0f;
@@ -200,6 +209,14 @@ p {
     border-color: #cccccc;
 }
 
+.btn-lg,
+.btn-group-lg>.btn {
+    padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.3333333;
+    border-radius: 0px;
+}
+
 .btn--buy-now,
 .btn--buy-alert {
     min-width: 130px;
@@ -208,12 +225,14 @@ p {
     text-shadow: 0 1px 1px rgb(99 165 15 / 75%);
 }
 
-.btn-lg,
-.btn-group-lg>.btn {
-    padding: 10px 16px;
-    font-size: 18px;
-    line-height: 1.3333333;
-    border-radius: 0px;
+#btn--buy-now-2,
+.btn--buy-now-new {
+    border-bottom: 4px solid #487513;
+    outline: 0;
+}
+
+.btn--back {
+    margin: 5px 0 0 0;
 }
 
 .btn-danger:hover {
