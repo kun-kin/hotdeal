@@ -3710,6 +3710,193 @@ form.form--general {
   }
 }
 
+.widget--profile {
+  margin-bottom: 0;
+}
+
+.sidebar--profile .sidebar__widget {
+  margin-right: 0;
+}
+
+.card-member {
+  border-radius: 13px;
+  box-sizing: border-box;
+  min-height: 210px;
+  margin: 0;
+  position: relative;
+  padding: 10px;
+  font-family: "VLBebasNeueRegular";
+}
+
+.card-silver {
+  background: url("https://www.hotdeal.vn/assets/img/bg-card-silver.png") no-repeat;
+  background-size: 100% 100%;
+}
+
+.pic-member {
+  width: 90px;
+  height: 90px;
+  position: absolute;
+  border-radius: 100%;
+  overflow: hidden;
+  top: 15px;
+  left: 15px;
+}
+.pic-member img {
+  width: 100%;
+  height: auto;
+}
+
+.pic-silver {
+  border: 2px solid #b3b3b8;
+}
+
+.box-name {
+  font-size: 20px;
+  text-transform: uppercase;
+  position: absolute;
+  top: 115px;
+  left: 15px;
+  letter-spacing: 4px;
+  width: 60%;
+  font-weight: bold;
+  line-height: 23px;
+}
+.box-name-silver {
+  color: #001d41;
+  height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-bottom: 4px;
+  letter-spacing: 0;
+}
+
+.box-diem {
+  font-size: 14px;
+  text-transform: uppercase;
+  position: absolute;
+  top: 115px;
+  right: 15px;
+  width: 40%;
+  padding-left: 20px;
+}
+
+.tt-diem-silver {
+  font-size: 16px;
+  letter-spacing: 4px;
+  display: block;
+  color: #001d41;
+  letter-spacing: 0;
+}
+
+.diem-silver {
+  font-size: 30px;
+  letter-spacing: 3px;
+  color: #000000;
+  font-weight: bold;
+  display: block;
+  letter-spacing: 0;
+}
+
+.hsd-silver {
+  font-size: 13px;
+  color: #000000;
+  letter-spacing: 3px;
+}
+@media (min-width: 992px) and (max-width: 1400px) {
+  .hsd-silver {
+    font-size: 9px;
+  }
+}
+@media (max-width: 576.98px) {
+  .hsd-silver {
+    font-size: 9px;
+  }
+}
+
+.block-tab {
+  background: #fffef8;
+  padding: 20px 15px;
+  margin-top: -10px;
+}
+.block-tab .box-tt-tab-diem {
+  display: flex;
+  padding: 5px 0;
+  font-size: 14px;
+  color: #878787;
+}
+.block-tab .box-tt-tab-diem .tab-c1 {
+  width: 33%;
+}
+.block-tab .box-tt-tab-diem .tab-c2 {
+  width: 33%;
+  text-align: center;
+}
+.block-tab .box-tt-tab-diem .tab-c3 {
+  width: 33%;
+  text-align: right;
+}
+.block-tab .box-tab-diem {
+  width: 100%;
+  height: 8px;
+  background: #cdcdcd;
+  border-radius: 50px;
+  position: relative;
+  margin: 5px 0;
+  overflow: hidden;
+}
+.block-tab .box-tab-diem .tab-diem-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 8px;
+  background: #ff3a46;
+  border-radius: 50px;
+}
+
+.side-menu {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+.side-menu > li {
+  list-style-type: none;
+}
+.side-menu > li > a {
+  border-bottom: none !important;
+  padding: 5px 5px 5px 0 !important;
+  position: relative;
+  display: block;
+  border-bottom: 1px solid #e7e7e7;
+  color: #222222;
+  padding: 15px 5px 15px 0;
+}
+
+.left-account {
+  padding: 10px 0 10px 25px;
+}
+
+.sidebar--profile .side-menu li > a {
+  padding: 15px 20px;
+  font-size: 15px;
+}
+
+.form--general .form-group .input-group .form-control:last-child {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+
+.btn.border-radius {
+  border-radius: 4px;
+}
+
+.form-gift-code {
+  max-width: 380px;
+  margin: 30px auto;
+  padding: 0 15px;
+}
+
 * {
   margin: 0;
   padding: 0;

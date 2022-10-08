@@ -20,7 +20,7 @@
 
 </head>
 
-<body class="page-profile">
+<body class="">
     <div class="wrapper" id="hd-container">
         <div class="hd-menu hd-effect-4 visible-xs visible-sm">
             <a href="javascript:;" class="toggle-nav toggle-nav--remove visible-xs visible-sm" data-target="#hd-container"><i class="fa-solid fa-xmark"></i></a>
@@ -293,7 +293,7 @@
                     </div>
                 </div>
             </div>
-            <div class="header-main header-main--simple">
+            <div class="header-main">
                 <div class="container">
                     <div class="row">
                         <a href="#" class="toggle-nav visible-xs visible-sm" data-target="#hd-container">
@@ -914,245 +914,330 @@
         </header>
         <main class="main main-content">
             <div class="container">
-                <div class="content content--full">
-                    <div class="box box--center">
-                        <div class="box__header">
-                            <h2 class="box__title">Đăng nhập</h2>
+                <div class="row sidebar-content--2">
+                    <div class="col-lg-4 sidebar--profile">
+                        <div class="widget sidebar__widget widget--profile">
+                            <div class="">
+                                <div class="card-member card-silver">
+                                    <div class="pic-member pic-silver">
+                                        <img src="https://www.hotdeal.vn/assets/img/external/site/avatar.jpg">
+                                    </div>
+                                    <div class="box-name">
+                                        <div class="box-name-silver">
+                                            nguyenquyenlinhnb@gmail.com </div>
+                                    </div>
+                                    <div class="box-diem">
+                                        <div class="tt-diem-silver">Doanh Số</div>
+                                        <div class="diem-silver">0</div>
+                                        <div class="hsd-silver">
+                                            HSD: 31/12/2022 </div>
+                                    </div>
+                                </div>
+                                <div class="block-tab">
+                                    <div class="box-tt-tab-diem">
+                                        <div class="tab-c1">THÂN THIẾT</div>
+                                        <div class="tab-c2">VÀNG</div>
+                                        <div class="tab-c3">VIP</div>
+                                    </div>
+                                    <div class="box-tab-diem">
+                                        <div class="tab-diem-content" style="width: 0%"></div>
+                                    </div>
+                                    <div class="box-tt-tab-diem">
+                                        <div class="tab-c1">1.200.000</div>
+                                        <div class="tab-c2">6.000.000</div>
+                                        <div class="tab-c3">12.000.000</div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="box__body">
-                            <form id="login-form-popup" class="form--general fv-form fv-form-bootstrap" method="post" action="" data-toggle="validator" novalidate="novalidate">
-                                <button type="submit" class="fv-hidden-submit" style="display: none; width: 0px; height: 0px;"></button>
-                                <div class="form-group form-group-lg has-feedback">
-                                    <div class="input-group">
-                                        <div class="input-group-addon"><i class="fa-regular fa-user"></i></div>
-                                        <input type="text" class="form-control" id="user_login" name="user_login" placeholder="Tên đăng nhập">
+                        <div class="box box--no-padding">
+                            <div class="box__body">
+                                <div class="sidebar__widget widget">
+                                    <ul class="side-menu left-account">
+                                        <li class=""><a href="/account-info.html">Thông tin tài khoản</a></li>
+                                        <li class=""><a href="/shipping-address.html">Địa chỉ giao hàng</a></li>
+                                        <li class=""><a href="/cart-info.html">Thông tin đơn hàng</a></li>
+                                        <li class=""><a href="/manage-voucher.html">Quản lý E-Voucher</a></li>
+                                        <li class=""><a href="/change-password.html">Thay đổi mật khẩu</a></li>
+                                        <li class=""><a href="/points-accrued.html">Điểm tích lũy</a></li>
+                                        <li class=""><a href="/payment-card.html">Thẻ thanh toán</a></li>
+                                        <li class=""><a href="/logout.html">Đăng xuất</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="box">
+                            <div class="box__header">
+                                <h2 class="box__title">Địa chỉ giao hàng</h2>
+                                <!-- <a href="/account.html" class="btn btn--back visible-xs visible-sm"><i class="fa fa-angle-left"></i></a> -->
+                            </div>
+                            <div class="box__body">
+                                <form action="" class="form form--general">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group form-group-lg">
+                                                <label for="name_0" class="control-label">Họ tên</label>
+                                                <input type="text" placeholder="Họ tên người nhận" class="form-control" id="name_0">
+                                            </div>
+                                            <div class="form-group form-group-lg">
+                                                <label for="address_0" class="control-label">Địa chỉ</label>
+                                                <input type="text" id="address_0" class="form-control" placeholder="Số nhà">
+                                            </div>
+                                            <div class="form-group form-group-lg">
+                                                <label for="street_0" class="control-label">Đường</label>
+                                                <input type="text" id="street_0" class="form-control" placeholder="Ví dụ: Hùng Vương">
+                                            </div>
+                                            <div class="form-group form-group-lg">
+                                                <label for="address_type_0">Loại địa chỉ</label>
+                                                <select name="" id="address_type_0" class="form-control">
+                                                    <option value="H">Nhà riêng</option>
+                                                    <option value="C">Văn phòng</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group form-group-lg">
+                                                <label for="delivery_on_weekend_0">
+                                                    Nhận hàng vào ngày thứ 7
+                                                </label>
+                                                <select name="" id="delivery_on_weekend_0" class="form-control">
+                                                    <option value="Y">Có thể</option>
+                                                    <option value="N">Không thể</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group form-group-lg">
+                                                <label for="phone_0" class="control-label">Số điện thoại</label>
+                                                <input type="text" name="" id="phone_0" placeholder="Số điện thoại liên hệ" class="form-control">
+                                            </div>
+                                            <div class="form-group form-group-lg">
+                                                <label for="city_0">Thành phố</label>
+                                                <select name="" id="city_0" class="form-control">
+                                                    <option value="">Chọn Thành Phố</option>
+                                                    <option value="1">Hồ Chí Minh</option>
+                                                    <option value="2">Hà Nội</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group form-group-lg">
+                                                <label for="district_0">Quận / Huyện</label>
+                                                <select name="" id="district_0" class="form-control">
+                                                    <option value="">Chọn Quận / Huyện</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group form-group-lg">
+                                                <label for="ward_0">Phường / Xã</label>
+                                                <select name="" id="ward_0" class="form-control">
+                                                    <option value="">Chọn Phường / Xã</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="justify-content-end row">
+                                                <div class="col-md-4">
+                                                    <button type="submit" id="btnsubmit" class="btn btn-lg btn-success btn-block border-radius" tabindex="11">CẬP NHẬT</button>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="form-group form-group-lg has-feedback">
-                                    <div class="input-group">
-                                        <div class="input-group-addon"><i class="fa-regular fa-lock-keyhole"></i></div>
-                                        <input type="password" class="form-control" id="password" name="password" placeholder="Mật khẩu">
-                                    </div>
-                                </div>
-                                <div class="form-group form-group-lg password-helper">
-                                    <label for="remember_me" class="pull-left remember-me"><input type="checkbox" name="remember_me" id="remember_me" value="Y" checked="checked"> Ghi nhớ đăng nhập</label>
-                                    <a class="pull-right" rel="nofollow" href="/khoi-phuc-mat-khau.html">Quên mật khẩu?</a>
-                                </div>
-                                <div class="form-group form-group-lg" style="margin-bottom: 0;">
-                                    <button type="submit" class="btn btn-success btn-lg btn-block">ÐĂNG NHẬP</button>
-
-                                    <p class="login-register-helper">Bạn chưa có tài khoản? <a rel="nofollow" href="/register.html">Ðăng ký ngay</a></p>
-                                </div>
+                            </div>
                             </form>
                         </div>
-                        <div class="box__footer">
-                            <div class="text-left">
-                                <p style="margin-bottom: 5px;">Hoặc đăng nhập bằng</p>
-                                <div class="box-social">
-                                    <a href="javascript:void(0);" class="login-google login-social social-google" id="login-google">
-                                        <img src="./images/icon-google.png" alt="Đăng nhập bằng Google+">
-                                    </a>
-                                    <a href="javascript:void(0);" class="login-facebook login-social social-facebook" id="login-facebook">
-                                        <img src="./images/icon-facebook.png" alt="Đăng nhập bằng Facebook">
-                                    </a>
-
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
-        </main>
+    </div>
+    </main>
 
-        <footer class="footer ">
-            <div class="footer-top ">
-                <div class="container ">
-                    <div class="row ">
-                        <div class="col-md-8 footer-menu ">
-                            <div class="col-md-4 col-b-left footer-menu__column menu ">
-                                <ul>
-                                    <li>
-                                        <p class="menu__heading ">Trợ giúp</p>
-                                        <div class="menu__listing ">
-                                            <a href=" ">Cách thức thanh toán</a>
-                                            <a href=" ">Hotdeal Membership</a>
-                                            <a href=" ">Chính sách đổi trả hàng</a>
-                                            <a href=" ">Quy trình xử lý khi phát hiện hành vi kinh doanh vi phạm </a>
-                                            <a href=" ">Chính sách giao hàng</a>
-                                            <a href=" ">Hotdeal E-voucher</a>
-                                            <a href=" ">Biện pháp xử lý khi phát hiện hành vi kinh doanh vi phạm </a>
-                                            <a href=" ">Cơ chế kiểm soát các nhà cung cấp</a>
-                                            <a href=" ">Điều khoản trả góp</a>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="col-md-4 col-b-left footer-menu__column menu ">
-                                <ul>
-                                    <li>
-                                        <p class="menu__heading ">TUYỂN DỤNG</p>
-                                        <div class="menu__listing ">
-                                            <a href=" ">Account Manager (Ngành Ẩm Thực)</a><a href=" ">Account Manager (Spa &amp; Beauty)</a>
-                                        </div>
-                                        <p class="menu__heading ">Giới thiệu</p>
-                                        <div class="menu__listing ">
-                                            <a href=" ">Quy chế hoạt động</a>
-                                            <a href=" ">Liên Hệ</a>
-                                            <a href=" ">Chính sách bảo mật thông tin</a>
-                                            <a href=" ">Về Chúng Tôi</a>
-                                            <a href=" ">Cơ chế giải quyết tranh chấp</a>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="col-md-4 col-b-left footer-menu__column menu ">
-                                <ul>
-                                    <li>
-                                        <p class="menu__heading ">Hợp tác</p>
-                                        <div class="menu__listing ">
-                                            <a href=" ">Thẻ Quà Tặng</a>
-                                            <a href=" ">Liên hệ hợp tác</a></div>
-                                        <p class="menu__heading ">VIDEO CLIPS</p>
-                                        <div class="menu__listing ">
-                                            <a href=" ">Videoclips</a>
-                                        </div>
-                                        <p class="menu__heading ">Thông Tin Báo Chí</p>
-                                        <div class="menu__listing ">
-                                            <a href=" ">Điểm tin</a><a href=" ">Thông cáo báo chí</a>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
+    <footer class="footer ">
+        <div class="footer-top ">
+            <div class="container ">
+                <div class="row ">
+                    <div class="col-md-8 footer-menu ">
+                        <div class="col-md-4 col-b-left footer-menu__column menu ">
+                            <ul>
+                                <li>
+                                    <p class="menu__heading ">Trợ giúp</p>
+                                    <div class="menu__listing ">
+                                        <a href=" ">Cách thức thanh toán</a>
+                                        <a href=" ">Hotdeal Membership</a>
+                                        <a href=" ">Chính sách đổi trả hàng</a>
+                                        <a href=" ">Quy trình xử lý khi phát hiện hành vi kinh doanh vi phạm </a>
+                                        <a href=" ">Chính sách giao hàng</a>
+                                        <a href=" ">Hotdeal E-voucher</a>
+                                        <a href=" ">Biện pháp xử lý khi phát hiện hành vi kinh doanh vi phạm </a>
+                                        <a href=" ">Cơ chế kiểm soát các nhà cung cấp</a>
+                                        <a href=" ">Điều khoản trả góp</a>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
-                        <div class="col-md-4 location hidden-xs ">
-                            <p>công ty cổ phần hotdeal</p>
-                            <p>Văn phòng hcm</p> 5 2/2 Thoại Ngọc Hầu, Phường Hòa Thạnh, Quận Tân Phú, TP.HCM
-                            <br> <span>Điện thoại</span>: (028) 7300 5757
-                            <p>Chi nhánh hà nội</p> Khu Văn phòng, Tầng 3, Tòa CT2 chung cư Ban Cơ Yếu Chính Phủ, Đường Khuất Duy Tiến, Phường Nhân Chính, Quận Thanh Xuân, TP.Hà Nội
-                            <br> <span>Điện thoại</span>: (024) 7300 5757
-                            <p>Chăm sóc khách hàng</p> 52/2 Thoại Ngọc Hầu, Phường Hòa Thạnh, Quận Tân Phú, TP.HCM
-                            <br> <span>Điện thoại</span>: 1900 6760
-                            <br> <span>Email</span>: cs@hotdeal.vn
+                        <div class="col-md-4 col-b-left footer-menu__column menu ">
+                            <ul>
+                                <li>
+                                    <p class="menu__heading ">TUYỂN DỤNG</p>
+                                    <div class="menu__listing ">
+                                        <a href=" ">Account Manager (Ngành Ẩm Thực)</a><a href=" ">Account Manager (Spa &amp; Beauty)</a>
+                                    </div>
+                                    <p class="menu__heading ">Giới thiệu</p>
+                                    <div class="menu__listing ">
+                                        <a href=" ">Quy chế hoạt động</a>
+                                        <a href=" ">Liên Hệ</a>
+                                        <a href=" ">Chính sách bảo mật thông tin</a>
+                                        <a href=" ">Về Chúng Tôi</a>
+                                        <a href=" ">Cơ chế giải quyết tranh chấp</a>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
+                        <div class="col-md-4 col-b-left footer-menu__column menu ">
+                            <ul>
+                                <li>
+                                    <p class="menu__heading ">Hợp tác</p>
+                                    <div class="menu__listing ">
+                                        <a href=" ">Thẻ Quà Tặng</a>
+                                        <a href=" ">Liên hệ hợp tác</a></div>
+                                    <p class="menu__heading ">VIDEO CLIPS</p>
+                                    <div class="menu__listing ">
+                                        <a href=" ">Videoclips</a>
+                                    </div>
+                                    <p class="menu__heading ">Thông Tin Báo Chí</p>
+                                    <div class="menu__listing ">
+                                        <a href=" ">Điểm tin</a><a href=" ">Thông cáo báo chí</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4 location hidden-xs ">
+                        <p>công ty cổ phần hotdeal</p>
+                        <p>Văn phòng hcm</p> 5 2/2 Thoại Ngọc Hầu, Phường Hòa Thạnh, Quận Tân Phú, TP.HCM
+                        <br> <span>Điện thoại</span>: (028) 7300 5757
+                        <p>Chi nhánh hà nội</p> Khu Văn phòng, Tầng 3, Tòa CT2 chung cư Ban Cơ Yếu Chính Phủ, Đường Khuất Duy Tiến, Phường Nhân Chính, Quận Thanh Xuân, TP.Hà Nội
+                        <br> <span>Điện thoại</span>: (024) 7300 5757
+                        <p>Chăm sóc khách hàng</p> 52/2 Thoại Ngọc Hầu, Phường Hòa Thạnh, Quận Tân Phú, TP.HCM
+                        <br> <span>Điện thoại</span>: 1900 6760
+                        <br> <span>Email</span>: cs@hotdeal.vn
                     </div>
                 </div>
             </div>
-            <div class="footer-communication ">
-                <div class="container ">
-                    <div class="row ">
-                        <div class="col-md-7 ">
-                            <div class="row ">
-                                <div class="col-md-6 news-letter hidden-sm hidden-xs ">
-                                    <form action=" ">
-                                        <label>Đăng ký nhận bản tin khuyến mãi</label>
-                                        <div class="newsletter form-inline ">
-                                            <div class="form-group has-feedback ">
-                                                <div class="input-group ">
-                                                    <input type="text " class="form-control newsletter-input " placeholder="Nhập email của bạn ">
-                                                </div>
+        </div>
+        <div class="footer-communication ">
+            <div class="container ">
+                <div class="row ">
+                    <div class="col-md-7 ">
+                        <div class="row ">
+                            <div class="col-md-6 news-letter hidden-sm hidden-xs ">
+                                <form action=" ">
+                                    <label>Đăng ký nhận bản tin khuyến mãi</label>
+                                    <div class="newsletter form-inline ">
+                                        <div class="form-group has-feedback ">
+                                            <div class="input-group ">
+                                                <input type="text " class="form-control newsletter-input " placeholder="Nhập email của bạn ">
                                             </div>
-                                            <div class="form-group ">
-                                                <div class="input-group ">
-                                                    <button type="submit " class="btn btn-success newsletter__button ">Đăng ký
+                                        </div>
+                                        <div class="form-group ">
+                                            <div class="input-group ">
+                                                <button type="submit " class="btn btn-success newsletter__button ">Đăng ký
                                                 </button>
-                                                </div>
                                             </div>
                                         </div>
-                                    </form>
-                                </div>
-                                <div class="col-md-6 app-store ">
-                                    <label>hotdeal app</label>
-                                    <div class="content-app ">
-                                        <span><a target="_blank " href="https://itunes.apple.com/vn/app/hotdeal.vn-cung-mua-chung/id1072313541?mt=8 " rel="nofollow "><img src="https://s3-hd.hotdeal.vn/original/2017/11/2/5a13d8cc6385a-icon-appstore.png "></a></span>
-                                        <span><a target="_blank " href="https://play.google.com/store/apps/details?id=com.hotdealvn.hotdealapp " rel="nofollow "><img src="https://s3-hd.hotdeal.vn/original/2017/11/2/5a13d8cc639d2-icon-googleplay.png "></a></span>
                                     </div>
-                                    <div class="hot-line ">
-                                        hotline: <span>1900 6760</span><br>
-                                    </div>
-                                </div>
+                                </form>
                             </div>
-                        </div>
-                        <div class="col-md-5 ">
-                            <div class="social ">
-                                <label>follow us</label>
-                                <div class="social-items ">
-                                    <a target="_blank " class="social-item social-item-facebook " href=" " rel="nofollow ">
-                                        <i class="fa-brands fa-facebook-f "></i>
-                                    </a>
-                                    <a target="_blank " class="social-item social-item-twitter " href=" " rel="nofollow ">
-                                        <i class="fa-brands fa-twitter "></i>
-                                    </a>
-                                    <a target="_blank " class="social-item social-item-google-plus " href=" " rel="nofollow ">
-                                        <i class="fa-brands fa-google-plus-g "></i>
-                                    </a>
-                                    <a target="_blank " class="social-item social-item-linkedin " href=" " rel="nofollow ">
-                                        <i class="fa-brands fa-linkedin-in "></i>
-                                    </a>
-                                    <a target="_blank " class="social-item social-item-youtube " href=" " rel="nofollow ">
-                                        <i class="fa-brands fa-youtube "></i>
-                                    </a>
+                            <div class="col-md-6 app-store ">
+                                <label>hotdeal app</label>
+                                <div class="content-app ">
+                                    <span><a target="_blank " href="https://itunes.apple.com/vn/app/hotdeal.vn-cung-mua-chung/id1072313541?mt=8 " rel="nofollow "><img src="https://s3-hd.hotdeal.vn/original/2017/11/2/5a13d8cc6385a-icon-appstore.png "></a></span>
+                                    <span><a target="_blank " href="https://play.google.com/store/apps/details?id=com.hotdealvn.hotdealapp " rel="nofollow "><img src="https://s3-hd.hotdeal.vn/original/2017/11/2/5a13d8cc639d2-icon-googleplay.png "></a></span>
                                 </div>
-                            </div>
-                            <div class=" ">
                                 <div class="hot-line ">
-                                    hotline tư vấn du lịch: <span>028 73003799 - 0354 466 968</span><br> Email booking: <span> booking@hotdeal.vn</span>
+                                    hotline: <span>1900 6760</span><br>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="footer-middle hidden-xs ">
-                <div class="container ">
-                    <div class="row ">
-                        <div class="col-md-5 ">
-                            <div class="redit-card ">
-                                <p>phương thức thanh toán</p>
-                                <img src="https://s3-hd.hotdeal.vn/original/2017/11/1/5a0a64b85c310-card-visa.png ">
-                                <img src="https://s3-hd.hotdeal.vn/original/2017/11/1/5a0a64b85c007-card-master.png ">
-                                <img src="https://s3-hd.hotdeal.vn/original/2017/11/1/5a0a64b85c20d-card-onepay.png ">
-                                <img src="https://s3-hd.hotdeal.vn/original/2017/11/1/5a0a64b85bde6-card-atm.png ">
-                                <img src="https://s3-hd.hotdeal.vn/original/2017/11/1/5a0a64b85c115-card-money.png ">
-                                <!--<img src="https://s3-hd.hotdeal.vn/original/2019/11/2/5de0ea786e178-card-laisaut.png ">-->
-                                <img src="https://s3-hd.hotdeal.vn/original/2019/11/2/5de0ea786e288-card-jcb.png ">
-                                <img src="https://s3-hd.hotdeal.vn/original/2019/11/2/5de0ea786e382-card-payoo.png ">
-                                <img src="https://s3-hd.hotdeal.vn/original/2019/11/2/5de0ea786e47e-card-vnpay.png ">
-                                <img src="https://s3-hd.hotdeal.vn/original/2019/11/2/5de0ea786e579-card-momo.png ">
-                                <img src="https://s3-hd.hotdeal.vn/original/2021/3/1/60488543247a4-icon-smartpay.png ">
-                                <img src="https://s3-hd.hotdeal.vn/original/2021/12/1/61b857cb21207-shopee-pay.png ">
+                    <div class="col-md-5 ">
+                        <div class="social ">
+                            <label>follow us</label>
+                            <div class="social-items ">
+                                <a target="_blank " class="social-item social-item-facebook " href=" " rel="nofollow ">
+                                    <i class="fa-brands fa-facebook-f "></i>
+                                </a>
+                                <a target="_blank " class="social-item social-item-twitter " href=" " rel="nofollow ">
+                                    <i class="fa-brands fa-twitter "></i>
+                                </a>
+                                <a target="_blank " class="social-item social-item-google-plus " href=" " rel="nofollow ">
+                                    <i class="fa-brands fa-google-plus-g "></i>
+                                </a>
+                                <a target="_blank " class="social-item social-item-linkedin " href=" " rel="nofollow ">
+                                    <i class="fa-brands fa-linkedin-in "></i>
+                                </a>
+                                <a target="_blank " class="social-item social-item-youtube " href=" " rel="nofollow ">
+                                    <i class="fa-brands fa-youtube "></i>
+                                </a>
                             </div>
                         </div>
-                        <div class="col-md-3 ">
-                            <div class="logo-shiper ">
-                                <p>dịch vụ giao hàng</p>
-                                <img src="https://s3-hd.hotdeal.vn/original/2021/12/1/61b857cb21099-vnpost.jpg ">
-                            </div>
-                        </div>
-                        <div class="col-md-4 ">
-                            <div class="logo-shiper ">
-                                <p>website cùng hệ thống</p>
-                                <a href="https://www.vinabook.com/?utm_campaign=logotaihotdeal&amp;utm_medium=logo&amp;utm_source=hotdeal&amp;utm_content=logo " target="_blank "><img src="https://s3-hd.hotdeal.vn/original/2017/11/1/5a0a697ea03cc-logo-vinabook.png "></a>
-                                <a href="https://www.yesgo.vn/?utm_campaign=logotaihotdeal&amp;utm_medium=logo&amp;utm_source=hotdeal&amp;utm_content=logo " target="_blank "><img src="https://s3-hd.hotdeal.vn/original/2017/11/1/5a0a697ea0548-logo-yesgo.png "></a>
+                        <div class=" ">
+                            <div class="hot-line ">
+                                hotline tư vấn du lịch: <span>028 73003799 - 0354 466 968</span><br> Email booking: <span> booking@hotdeal.vn</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="footer-bottom ">
-                <div class="container ">
-                    <div class="row ">
-                        <div class="col-md-10 ">
-                            Công ty CP Hotdeal - 52/2 Thoại Ngọc Hầu, Phường Hòa Thạnh, Quận Tân Phú, TP.HCM <br> Mã số thuế: 0310955176 do Sở Kế hoạch đầu tư TP HCM cấp ngày 29/06/2011<br> ĐT: (028) 7300 5757 - Email: kinhdoanh@hotdeal.vn<br>
+        </div>
+        <div class="footer-middle hidden-xs ">
+            <div class="container ">
+                <div class="row ">
+                    <div class="col-md-5 ">
+                        <div class="redit-card ">
+                            <p>phương thức thanh toán</p>
+                            <img src="https://s3-hd.hotdeal.vn/original/2017/11/1/5a0a64b85c310-card-visa.png ">
+                            <img src="https://s3-hd.hotdeal.vn/original/2017/11/1/5a0a64b85c007-card-master.png ">
+                            <img src="https://s3-hd.hotdeal.vn/original/2017/11/1/5a0a64b85c20d-card-onepay.png ">
+                            <img src="https://s3-hd.hotdeal.vn/original/2017/11/1/5a0a64b85bde6-card-atm.png ">
+                            <img src="https://s3-hd.hotdeal.vn/original/2017/11/1/5a0a64b85c115-card-money.png ">
+                            <!--<img src="https://s3-hd.hotdeal.vn/original/2019/11/2/5de0ea786e178-card-laisaut.png ">-->
+                            <img src="https://s3-hd.hotdeal.vn/original/2019/11/2/5de0ea786e288-card-jcb.png ">
+                            <img src="https://s3-hd.hotdeal.vn/original/2019/11/2/5de0ea786e382-card-payoo.png ">
+                            <img src="https://s3-hd.hotdeal.vn/original/2019/11/2/5de0ea786e47e-card-vnpay.png ">
+                            <img src="https://s3-hd.hotdeal.vn/original/2019/11/2/5de0ea786e579-card-momo.png ">
+                            <img src="https://s3-hd.hotdeal.vn/original/2021/3/1/60488543247a4-icon-smartpay.png ">
+                            <img src="https://s3-hd.hotdeal.vn/original/2021/12/1/61b857cb21207-shopee-pay.png ">
                         </div>
-                        <div class="col-md-2 icon-dangky-cong-thuong ">
-                            <a href=" ">
-                                <img src="https://s3-hd.hotdeal.vn/original/2017/11/1/5a0a6efbd6a4d-logo-dangky.png ">
-                            </a>
+                    </div>
+                    <div class="col-md-3 ">
+                        <div class="logo-shiper ">
+                            <p>dịch vụ giao hàng</p>
+                            <img src="https://s3-hd.hotdeal.vn/original/2021/12/1/61b857cb21099-vnpost.jpg ">
+                        </div>
+                    </div>
+                    <div class="col-md-4 ">
+                        <div class="logo-shiper ">
+                            <p>website cùng hệ thống</p>
+                            <a href="https://www.vinabook.com/?utm_campaign=logotaihotdeal&amp;utm_medium=logo&amp;utm_source=hotdeal&amp;utm_content=logo " target="_blank "><img src="https://s3-hd.hotdeal.vn/original/2017/11/1/5a0a697ea03cc-logo-vinabook.png "></a>
+                            <a href="https://www.yesgo.vn/?utm_campaign=logotaihotdeal&amp;utm_medium=logo&amp;utm_source=hotdeal&amp;utm_content=logo " target="_blank "><img src="https://s3-hd.hotdeal.vn/original/2017/11/1/5a0a697ea0548-logo-yesgo.png "></a>
                         </div>
                     </div>
                 </div>
             </div>
-        </footer>
+        </div>
+        <div class="footer-bottom ">
+            <div class="container ">
+                <div class="row ">
+                    <div class="col-md-10 ">
+                        Công ty CP Hotdeal - 52/2 Thoại Ngọc Hầu, Phường Hòa Thạnh, Quận Tân Phú, TP.HCM <br> Mã số thuế: 0310955176 do Sở Kế hoạch đầu tư TP HCM cấp ngày 29/06/2011<br> ĐT: (028) 7300 5757 - Email: kinhdoanh@hotdeal.vn<br>
+                    </div>
+                    <div class="col-md-2 icon-dangky-cong-thuong ">
+                        <a href=" ">
+                            <img src="https://s3-hd.hotdeal.vn/original/2017/11/1/5a0a6efbd6a4d-logo-dangky.png ">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
     </div>
     <a href="# " class="scrollup ">
         <i class="fa-sharp fa-solid fa-angle-up "></i>
@@ -1175,6 +1260,10 @@
     <script>
         new WOW().init();
     </script>
+
+</body>
+
+</html>cript>
 
 </body>
 
